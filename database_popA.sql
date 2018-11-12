@@ -62,3 +62,17 @@ INSERT INTO employs_employee (EMID, CID, Ename)
     (28, 14, 'Austin'),
     (29, 20, 'Leo'),
     (30, 19, 'Jacky');
+
+INSERT INTO befriend (UID1, UID2)
+    VALUES
+    (1,2),
+    (3,2),
+    (4,2),
+    (5,4),
+    (5,3),
+    (3,6),
+    (8,9),
+    (9,1),
+    (10,3),
+    (7,5);
+
