@@ -1,4 +1,3 @@
--- Tables: users, common users, company, employer_employees, follows, befriends.
 
 INSERT INTO users (UID, Name, Password, Email, PhotoPath)
     VALUES 
