@@ -5,8 +5,8 @@ DROP TABLE IF EXISTS users;
 CREATE TABLE users(
    UID               INTEGER AUTO_INCREMENT,
    Name              VARCHAR(20) NOT NULL,
-   Password          VARCHAR(20) NOT NULL,
-   Email             VARCHAR(30) NOT NULL UNIQUE,
+   Password          VARCHAR(30) NOT NULL,
+   Email             VARCHAR(60) NOT NULL UNIQUE,
    PhotoPath         VARCHAR(100),  -- added this attribute to link to photos for user profiles
    PRIMARY KEY (UID));
 
@@ -21,7 +21,7 @@ CREATE TABLE common_users(
 DROP TABLE IF EXISTS company;
 CREATE TABLE company(
    CID               INTEGER,
-   Type              VARCHAR(10), -- should type be initialized to NULL?
+   Type              VARCHAR(30), -- should type be initialized to NULL?
    PRIMARY KEY (CID),
    FOREIGN KEY (CID) REFERENCES users(UID)
                      ON DELETE CASCADE
