@@ -27,7 +27,7 @@ CREATE TABLE company(
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
-DROP TABLE IF EXISTS company;
+DROP TABLE IF EXISTS employs_employee;
 CREATE TABLE employs_employee(
    EMID              INTEGER AUTO_INCREMENT,
    CID               INTEGER,
@@ -44,10 +44,10 @@ CREATE TABLE follow(
    FollowDate        Date,
    PRIMARY KEY (UID, CID),
    FOREIGN KEY (UID) REFERENCES common_Users
-                     ON DELETE CASCADE,
+                     ON DELETE CASCADE
                      ON UPDATE CASCADE,
    FOREIGN KEY (CID) REFERENCES company
-                     ON DELETE CASCADE,
+                     ON DELETE CASCADE
                      ON UPDATE CASCADE); -- originally was set null but having it cascade makes more sense to me as if for some reason the cid were updated I'd assume the user should still follow them
 
 DROP TABLE IF EXISTS befriend;
@@ -55,9 +55,13 @@ CREATE TABLE befriend(
    UID1              INTEGER,
    UID2              INTEGER,
    PRIMARY KEY (UID1, UID2),
-   FOREIGN KEY (UID1, UID2) REFERENCES common_users(UID) -- not sure if this is written correctly to have both reference UID
+   FOREIGN KEY (UID1) REFERENCES common_users(UID) -- not sure if this is written correctly to have both reference UID
+                     ON DELETE CASCADE
+                     ON UPDATE CASCADE,
+   FOREIGN KEY (UID2) REFERENCES common_users(UID) -- not sure if this is written correctly to have both reference UID
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
+                     
 
 DROP TABLE IF EXISTS game;
 CREATE TABLE game(
@@ -123,7 +127,7 @@ CREATE TABLE post(
                      ON UPDATE CASCADE);
 
 DROP TABLE IF EXISTS likes;
-CREATE TABLE likes( --changed since like is a reserved keyword
+CREATE TABLE likes( 
    UID               INTEGER,
    PostID            INTEGER,
    PRIMARY KEY (UID, PostID),
@@ -148,8 +152,8 @@ CREATE TABLE user_comments_posts(
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
-DROP TABLE IF EXISTS group;
-CREATE TABLE group(
+DROP TABLE IF EXISTS groups;
+CREATE TABLE groups(
    GID               INTEGER AUTO_INCREMENT,
    Name              CHAR(20),
    Description       VARCHAR(1000),
@@ -169,16 +173,16 @@ CREATE TABLE group_contains_user(
    FOREIGN KEY (UID) REFERENCES users
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (GID) REFERENCES group
+   FOREIGN KEY (GID) REFERENCES groups
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
-DROP TABLE group_contains_post;
+DROP TABLE IF EXISTS group_contains_post;
 CREATE TABLE group_contains_post(
    GID               INTEGER,
    PostID            INTEGER UNIQUE,
    PRIMARY KEY (GID, PostID),
-   FOREIGN KEY (GID) REFERENCES group
+   FOREIGN KEY (GID) REFERENCES groups
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
    FOREIGN KEY (PostID) REFERENCES post
@@ -191,7 +195,7 @@ CREATE TABLE admins(
    Name        CHAR(20),
    Title       CHAR(20),
    Password    VARCHAR(20),
-   Username    VARCHAR(20)
+   Username    VARCHAR(20),
    PRIMARY KEY (AID));
 
 DROP TABLE IF EXISTS admin_monitors_content;
@@ -203,7 +207,7 @@ CREATE TABLE admin_monitors_content( -- this has been changed to just show what 
    FOREIGN KEY (AID) REFERENCES admins
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (GID) REFERENCES group
+   FOREIGN KEY (GID) REFERENCES groups
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
    FOREIGN KEY (PostID) REFERENCES Post
