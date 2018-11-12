@@ -190,6 +190,8 @@ CREATE TABLE admins(
    AID         INTEGER AUTO_INCREMENT,
    Name        CHAR(20),
    Title       CHAR(20),
+   Password    VARCHAR(20),
+   Username    VARCHAR(20)
    PRIMARY KEY (AID));
 
 DROP TABLE IF EXISTS admin_monitors_content;
