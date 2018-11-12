@@ -87,3 +87,10 @@ INSERT INTO follow (UID, CID, FollowDate)
     (7,15, '2012-12-08'),
     (9,14, '2018-04-12'),
     (10,20, '2014-10-30');
+
+
+-- Part B: Tables: groups, groups_contains_posts, groups_contains_user, likes, posts, users_comment_posts
+-- TODO
+
+-- Part C: Tables: games, play, events, creates_events, admins, admins_monitors_content, rsvp
+-- TODO
