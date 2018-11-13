@@ -1,6 +1,6 @@
 
 INSERT INTO users (UID, Name, Password, Email, PhotoPath)
-    VALUES 
+    VALUES
     (1, 'Jeff', 'superjeff', 'jeff@gmail.com', '/photos/jeff.jpeg'),
     (2, 'Doug', 'dumbdoug', 'doug@gmail.com', '/photos/doug.jpeg'),
     (3, 'Tom', 'bighattom', 'tom@gmail.com', '/photos/tom.jpeg'),
@@ -25,7 +25,7 @@ INSERT INTO users (UID, Name, Password, Email, PhotoPath)
 
 
 INSERT INTO common_users (UID)
-    VALUES 
+    VALUES
     (1),
     (2),
     (3),
@@ -37,7 +37,7 @@ INSERT INTO common_users (UID)
     (9),
     (10);
 INSERT INTO company (CID, Type)
-    VALUES 
+    VALUES
     (11, 'ads'),
     (12, 'selling stuff'),
     (13, 'OS'),
@@ -91,6 +91,97 @@ INSERT INTO follow (UID, CID, FollowDate)
 
 -- Part B: Tables: groups, groups_contains_posts, groups_contains_user, likes, posts, users_comment_posts
 -- TODO
+INSERT INTO groups (GID, Name, Descriptor, Type, FounderID, Founder)
+    VALUES
+     (1,
+        'Vancouver Sneakhead Group',
+        'A place for sneakerheads to gather and share sneaker news in Vancouver',
+        'Social',
+        1,
+        'Jeff'),
+
+     (2,
+          'Headpages News',
+          'A place where Headpages share their storie, news, and interaction with their members with their member',
+          'Social',
+          2,
+          'Doug'),
+
+
+     (3,
+          'Headpages Anime Society',
+          'Headpages''s very own anime club that gathers all anime enthusiasts in the company',
+          'Interests',
+          3,
+          'Tom'),
+
+     (4,
+          'Headpages Music Club',
+          'Headpages''s very own music club that gathers all music enthusiasts in the company',
+          'Interests',
+          4,
+          'Bob'),
+
+     (5,
+          'Headpages Gym Buffs',
+          'Headpages''s very own gym club that gathers all gym buffs in the company',
+          'Sports',
+          5,
+          'Joe'),
+
+     (6,
+           'Vancouver Bitcoin Society',
+           'A place where Bitcoin Enthusiasts in Vancouver gather to share their interest in Bitcoin',
+           'Interests',
+           6,
+           'Smith'),
+
+     (7,
+           'Vancouver Finance Social',
+           'A place where finance finatics gather to talk everything finance',
+           'Business',
+           7,
+           'Matt'),
+
+     (8,
+           'Canada''s Hockey Team',
+           'A group dedicated to everything hockey in Canada',
+           'Sports',
+           8,
+           'Cup'),
+
+     (9,
+            'Vancouver Foodie Group',
+            'A place where people gather and share their experience with food across Vancouver',
+            'Food',
+            9,
+            'Don'),
+
+     (10,
+            'Vancouver''s Children''s Hospital',
+            'A place where VCH share updates and their patient''s stories' ,
+            'Company group',
+            10,
+            'Donkey');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 -- Part C: Tables: games, play, events, creates_events, admins, admins_monitors_content, rsvp
 -- TODO
