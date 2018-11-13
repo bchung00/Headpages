@@ -18,6 +18,7 @@ CREATE TABLE common_users(
                         ON DELETE CASCADE
                         ON UPDATE CASCADE);
 
+
 DROP TABLE IF EXISTS company;
 CREATE TABLE company(
    CID               INTEGER,
