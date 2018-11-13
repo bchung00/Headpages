@@ -253,6 +253,45 @@ INSERT INTO groups (GID, Name, Descriptor, Type, FounderID, Founder)
             (10, 3),
             (10, 11);
 
+    INSERT INTO post(PostID, UID, Location, Time, Date, Photo_File, Text)
+        VALUE
+            (1, 1, 'Vancouver, BC, Canada', '16:10:20', '2018-01-01', '/photos/post1/jpeg', 'First photo ever!' ),
+            (2, 2, 'Yellow Knife, BC, Canada', '21:11:30', '2018-01-02', '/photos/post2/jpeg', 'Saw the northen lights for the first time'),
+            (3, 3, 'Toronto, ON, Canada', '13:11:11', '2018-01-03', NULL, 'Excited to see the blue jays game tonight'),
+            (4, 4, 'Vancouver, BC, Canada', '00:01:50', '2018-01-04', NULL, 'Why am i still awake at this time?'),
+            (5, 5, 'Cambridge, ON, Canada','08:12:17', '2018-01-05', '/photos/post5/jpeg', 'Great view'),
+            (6, 6, 'Montreal, QB, Canada', '09:15:40', '2018-01-06', NULL, 'Anyone can help me fix my bike?'),
+            (7, 7, 'Queens, ON, Canada', '17:12:30', '2018-01-07', '/photos/post7/jpeg', NULL),
+            (8, 8, 'Hamilton, ON, Canada', '22:12:21', '2018-01-08', NULL, 'I LOVE MY LIFE RN'),
+            (9, 9, 'Victoria, BC, Cadana', '01:01:01', '2018-01-09', '/photos/post9/jpeg', 'I LOVE MY DOG'),
+            (10, 10, 'Ottawa, ON, Canada','03:12:42', '2018-01-10', NULL, 'GOD BLESS CANADA'),
+
+            (11, 1, 'Calgary, AB, Canada', '05:12:10', '2018-02-02', NULL, 'Beautiful day in Calgary'),
+            (12, 2, 'St.John, NB, Canada', '12:12:12', '2018-11-11', NULL, 'Bless the weather in New Brunswick'),
+            (13, 3, 'Saskatoon, SK, Canada', '17:17:28', '2018-03-03', '/phots/post12/jpeg', 'Beautiful Saskatoon'),
+            (14, 4, 'Edmonton, AB, Canada', '19:39:59', '2018-04-04', NULL, 'Oops did I missed April Fools Day?'),
+            (15, 5, 'Winnepeg, MN, Canada', '12:42:12', '2018-05-05', '/photos/post15/jpeg', 'I love fall weather!'),
+            (16, 6, 'Kelowna, BC, Canada', '22:42:12', '2018-06-06', NULL, 'I love being in wine city of canada' ),
+            (17, 7, 'Guelph, ON, Canada','09:12:32', '2018-07-07', NULL, 'Summer in Guelph is the best'),
+            (18, 8, 'Regina, SK, Canada', '08:15:40', '2018-08-08', NULL, 'CANT WAIT FOR THE NEW SEMESTER!!'),
+            (19, 9, 'London, ON, Canada','12:12:32', '2018-09-09', '/photo/post19/jpeg', 'Cant believe summer is almost over'),
+            (20, 10, 'Halifax, NS, Canada', '23:23:12', '2018-10-10', 'photo/post20/jpeg, 'Winter Ball Charity Fundraising'),
+
+            (21, 1),
+            (22, 2),
+            (23, 3),
+            (24, 4),
+            (25, 5),
+            (26, 6),
+            (27, 7),
+            (28, 8),
+            (29, 9),
+            (30, 10),
+
+
+
+
+
 
 
 
