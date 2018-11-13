@@ -188,6 +188,31 @@ INSERT INTO groups (GID, Name, Descriptor, Type, FounderID, Founder)
             (9, 29),
             (10, 30);
 
+     INSERT INTO groups_contains_user(UID, GID)
+        VALUE
+            (1, 1),
+            (2, 2),
+            (3, 3),
+            (4, 4),
+            (5, 5),
+            (6, 6),
+            (7, 7),
+            (8, 8),
+            (9, 9),
+            (10, 10),
+            (1, 2),
+            (2, 3),
+            (3, 4),
+            (4, 5),
+            (5, 6),
+            (6, 7),
+            (7, 8),
+            (8, 9),
+            (9, 10),
+            (10, 1);
+
+
+
 
 
 
