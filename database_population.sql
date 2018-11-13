@@ -93,4 +93,9 @@ INSERT INTO follow (UID, CID, FollowDate)
 -- TODO
 
 -- Part C: Tables: games, play, events, creates_events, admins, admins_monitors_content, rsvp
+<<<<<<< HEAD
 -- TODO
+=======
+-- TODO
+
+>>>>>>> database-pop
