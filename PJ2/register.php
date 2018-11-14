@@ -1,24 +1,71 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Chanyeol
- * Date: 2017/6/20
- * Time: 下午5:01
- */
-date_default_timezone_set('prc');
-$db = mysqli_connect("localhost", "carrie", "carrie", "travel");
-if (mysqli_connect_errno()) {
-    echo "Failed to connect to MySQL: " . mysqli_connect_error();
-    exit(500);
-}
-$Email = $_GET['email'];
-$Password = $_GET['password'];
-$Name = $_GET['name'];
+
+include "connect.php";
+error_reporting(0);
+
+$Email = $_POST["email"];
+$Password = $_POST["password"];
+$Name = $_POST["name"];
 $check = $db->query("SELECT count(*) as m from users WHERE Email = '{$Email}'");
 $res = mysqli_fetch_object($check);
 if($res->m >0){
-    echo false;
+    echo "Email Already Exist!";
 }else{
-    $register = $db->query("INSERT INTO users (UID, Name, Password, Email, PhotoPath) VALUES('$res->m +1', '$Password', 1, '$time', '$time')");
-    echo true;
+    if ((($_FILES["file"]["type"] == "image/jpeg")
+            || ($_FILES["file"]["type"] == "image/pjpeg"))
+        && ($_FILES["file"]["size"] < 20 * 1024 * 1024)
+    ) {
+        if ($_FILES["file"]["error"] > 0) {
+            echo "Error: " . $_FILES["file"]["error"] . "<br/>";
+        } else {
+            if (is_uploaded_file($_FILES["file"]['tmp_name'])) {
+                $relativePath = $_FILES["file"]["name"];
+                $path = "photos/" . $_FILES["file"]["name"];
+                //Move file
+
+                move_uploaded_file($_FILES['file']['tmp_name'], $path);
+                clipImg($path, $Name);
+
+                $num = $db->query("SELECT MAX(UID) as n from users");
+                $UID = mysqli_fetch_object($num) -> n + 1;
+                $db->query("INSERT INTO users (UID, UName, Password, Email, PhotoPath) VALUES('$UID','$Name','$Password', '$Email', '$path')");
+                echo $db->error;
+                echo "success";
+            } else
+                echo false;
+        }
+    } else {
+        echo "Invalid file!";
+    }
+
+}
+function clipImg($path, $name){
+
+    $im = imagecreatefromjpeg($path);
+    $x = imagesx($im);//Get Width
+    $y = imagesy($im);//Get Height
+
+    // After clipping
+    $xx = 150;
+    $yy = 150;
+
+    if ($x > $y) {//Width > Height
+        $sx = abs(($y - $x) / 2);
+        $sy = 0;
+        $thumbw = $y;
+        $thumbh = $y;
+    } else {//Height > Width
+        $sy = abs(($x - $y) / 2.5);
+        $sx = 0;
+        $thumbw = $x;
+        $thumbh = $x;
+    }
+    if (function_exists("imagecreatetruecolor")) {
+        $dim = imagecreatetruecolor($yy, $xx);
+    } else {
+        $dim = imagecreate($yy, $xx);
+    }
+    imageCopyreSampled($dim, $im, 0, 0, $sx, $sy, $yy, $xx, $thumbw, $thumbh);
+    header("Content-type: image/jpeg");
+    imagejpeg($dim, "photos/" . $name);
 }

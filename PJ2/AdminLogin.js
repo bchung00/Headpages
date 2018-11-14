@@ -1,18 +1,7 @@
 window.addEventListener("load", function() {
-    var email = document.getElementById("email");
+    var email = document.getElementById("username");
     var password = document.getElementById("password");
     var login = document.getElementById("login");
-
-    var strCookie=document.cookie;
-    var arrCookie=strCookie.split("; ");
-    for(var i=0;i<arrCookie.length;i++){
-        var arr=arrCookie[i].split("=");
-        if(arr[0]=='email'){
-            email.value = arr[1];
-        }else if(arr[0]=='password'){
-            password.value = arr[1];
-        }else{}
-    }
 
     function setCookie(c_name,value,expiredays)
     {
@@ -27,12 +16,12 @@ window.addEventListener("load", function() {
             for (var i = keys.length; i--;)
                 document.cookie=keys[i]+'=0;expires=' + new Date(0).toUTCString()
         }
-        fetch("login.php?email="+ email.value + "&password=" + password.value).then(function(rsp) {
+        fetch("AdminLogin.php?username="+ username.value + "&password=" + password.value).then(function(rsp) {
             return rsp.text();
         }).then(function(data) {
             console.log(data);
             if(!(data == "" || data == undefined || data == null)){
-                setCookie("uid",data,1);
+                setCookie("aid",data,1);
                 window.location.href="index.html";
             }else{
                 document.getElementById("warning").innerHTML="  * Wrong Email/Password!";

@@ -36,7 +36,7 @@ if ((($_FILES["file"]["type"] == "image/jpeg")
                 $citycode = $json[0]["GeoNameID"]+"";
                 //这里找到了城市的ID
 
-                $countryid = $db->query("SELECT ISO from geocountries where CountryName='" . $country . "'");
+                $countryid = $db->query("SELECT ISO from geocountries where CountryName='" . $country . "'-");
                 if (!$countryid->fetch_assoc()) {echo "Wrong Country2";}
                 else {
                     $json = mysqli_fetch_all($countryid, MYSQLI_ASSOC);

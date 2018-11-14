@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Chanyeol
- * Date: 2017/6/14
- * Time: 下午10:03
- */
 
 include "connect.php";
 $Email = $_GET['email'];

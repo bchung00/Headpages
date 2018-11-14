@@ -1,9 +1,3 @@
-/**
- * Created by Chanyeol on 2017/6/29.
- */
-/**
- * Created by lyqlucy on 17/6/23.
- */
 window.addEventListener("load",function () {
     var warning = document.getElementById("warning");
     var country = document.getElementById("country");
