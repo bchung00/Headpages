@@ -53,11 +53,18 @@
     <div class="register">
       <form id="registerForm">
     <table>
-
       <th>Register</th>
+      <tr>
+        <td>
+          <label class="type"><input class="type" id="user" type="radio" name="type" value="User">User</label>
+          <label class="type"><input class="type" id="company" type="radio" name="type" value="Company">Company</label>
+          <input type="text" placeholder="Company Type..." name="typeInput" class="input" id="typeInput"/>
+        </td>
+      </tr>
       <tr>
         <td><input type="text" placeholder="Email..." name="email" class="input" id="email" /></td>
       </tr>
+
       <tr>
         <td><input type="Password" placeholder="Password..." name="password" class="input" id="password" /><br> </td>
       </tr>

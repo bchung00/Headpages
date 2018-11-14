@@ -47,6 +47,18 @@ table td{
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 }
+.type {
+	width: 19px;
+	height: 19px;
+	margin: 1% 1% 1% 1%;
+	vertical-align: middle;
+	cursor: pointer;
+}
+#typeInput{
+	width: 50%;
+	font-size: 1em;
+	visibility: hidden;
+}
 #file{
 	font-size: 0.9em;
 }

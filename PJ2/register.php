@@ -3,6 +3,8 @@
 include "connect.php";
 error_reporting(0);
 
+$type = $_POST["type"];
+$typeInput = $_POST["typeInput"];
 $Email = $_POST["email"];
 $Password = $_POST["password"];
 $Name = $_POST["name"];
@@ -30,7 +32,19 @@ if($res->m >0){
                 $UID = mysqli_fetch_object($num) -> n + 1;
                 $db->query("INSERT INTO users (UID, Name, Password, Email, PhotoPath) VALUES('$UID','$Name','$Password', '$Email', '$path')");
                 echo $db->error;
-                echo "success";
+                switch ($type){
+                    case "User":
+                        $db->query("INSERT INTO common_users (UID) VALUES('$UID')");
+                        echo $db->error;
+                        echo "success";
+                        break;
+
+                    case "Company":
+                        $db->query("INSERT INTO company (CID, Type) VALUES('$UID','$typeInput')");
+                        echo $db->error;
+                        echo "success";
+                        break;
+                }
             } else
                 echo false;
         }
