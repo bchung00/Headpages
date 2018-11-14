@@ -204,6 +204,7 @@ CREATE TABLE admin_monitors_content( -- this has been changed to just show what 
    AID         INTEGER,
    GID         INTEGER,
    PostID      INTEGER,
+   Approval    BIT,
    PRIMARY KEY (AID, GID, PostID),
    FOREIGN KEY (AID) REFERENCES admins
                      ON DELETE CASCADE
