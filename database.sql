@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS common_users;
 CREATE TABLE common_users(
    UID               INTEGER,
    PRIMARY KEY (UID),
-   FOREIGN KEY (UID) REFERENCES users
+   FOREIGN KEY (UID) REFERENCES users(UID)
                         ON DELETE CASCADE
                         ON UPDATE CASCADE);
 
@@ -34,7 +34,7 @@ CREATE TABLE employs_employee(
    CID               INTEGER,
    Ename             VARCHAR(20) NOT NULL,
    PRIMARY KEY (EMID, CID),
-   FOREIGN KEY (CID) REFERENCES company
+   FOREIGN KEY (CID) REFERENCES company(CID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -44,10 +44,10 @@ CREATE TABLE follow(
    CID               INTEGER,
    FollowDate        Date,
    PRIMARY KEY (UID, CID),
-   FOREIGN KEY (UID) REFERENCES common_Users
+   FOREIGN KEY (UID) REFERENCES common_Users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (CID) REFERENCES company
+   FOREIGN KEY (CID) REFERENCES company(CID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE); -- originally was set null but having it cascade makes more sense to me as if for some reason the cid were updated I'd assume the user should still follow them
 
@@ -78,10 +78,10 @@ CREATE TABLE play(
    UID               INTEGER,
    Score             INTEGER,
    PRIMARY KEY (GID, UID),
-   FOREIGN KEY (GID) REFERENCES game
+   FOREIGN KEY (GID) REFERENCES game(GID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (UID) REFERENCES common_users
+   FOREIGN KEY (UID) REFERENCES common_users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -95,7 +95,7 @@ CREATE TABLE creates_event(
    Location          CHAR(20),
    Description       VARCHAR(1000),
    PRIMARY KEY (EID),
-   FOREIGN KEY (UID) REFERENCES users
+   FOREIGN KEY (UID) REFERENCES users(UID)
                      ON DELETE SET NULL
                      ON UPDATE CASCADE);
 
@@ -106,10 +106,10 @@ CREATE TABLE rsvp(
    Time              TIME,
    Date              DATE,
    PRIMARY KEY (UID, EID),
-   FOREIGN KEY (UID) REFERENCES users
+   FOREIGN KEY (UID) REFERENCES users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (EID) REFERENCES create_Events
+   FOREIGN KEY (EID) REFERENCES create_Events(EID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -123,7 +123,7 @@ CREATE TABLE post(
    Photo_File        VARCHAR(100),
    Text              TEXT,
    PRIMARY KEY (PostID),
-   FOREIGN KEY (UID) REFERENCES users
+   FOREIGN KEY (UID) REFERENCES users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -132,10 +132,10 @@ CREATE TABLE likes(
    UID               INTEGER,
    PostID            INTEGER,
    PRIMARY KEY (UID, PostID),
-   FOREIGN KEY (UID) REFERENCES users
+   FOREIGN KEY (UID) REFERENCES users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (PostID) REFERENCES post
+   FOREIGN KEY (PostID) REFERENCES post(PostID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -146,10 +146,10 @@ CREATE TABLE user_comments_posts(
    PostID            INTEGER,
    Text              TEXT,
    PRIMARY KEY (CommentID),
-   FOREIGN KEY (UID) REFERENCES Users
+   FOREIGN KEY (UID) REFERENCES Users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (PostID) REFERENCES Post
+   FOREIGN KEY (PostID) REFERENCES Post(PostID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -171,10 +171,10 @@ CREATE TABLE group_contains_user(
          UID                              INTEGER,
          GID                              INTEGER,
    PRIMARY KEY (UID,GID),
-   FOREIGN KEY (UID) REFERENCES users
+   FOREIGN KEY (UID) REFERENCES users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (GID) REFERENCES groups
+   FOREIGN KEY (GID) REFERENCES groups(GID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -183,10 +183,10 @@ CREATE TABLE group_contains_post(
    GID               INTEGER,
    PostID            INTEGER UNIQUE,
    PRIMARY KEY (GID, PostID),
-   FOREIGN KEY (GID) REFERENCES groups
+   FOREIGN KEY (GID) REFERENCES groups(GID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (PostID) REFERENCES post
+   FOREIGN KEY (PostID) REFERENCES post(PostID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
@@ -206,12 +206,12 @@ CREATE TABLE admin_monitors_content( -- this has been changed to just show what 
    PostID      INTEGER,
    Approval    BIT,
    PRIMARY KEY (AID, GID, PostID),
-   FOREIGN KEY (AID) REFERENCES admins
+   FOREIGN KEY (AID) REFERENCES admins(AID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (GID) REFERENCES groups
+   FOREIGN KEY (GID) REFERENCES groups(GID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (PostID) REFERENCES Post
+   FOREIGN KEY (PostID) REFERENCES Post(PostID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
