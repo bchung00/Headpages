@@ -96,7 +96,7 @@ INSERT INTO follow (UID, CID, FollowDate)
 
 INSERT INTO game (Name, Type, Description)
     VALUES
-    ('Super Mario', 'ACT', 'The Super Mario games follow Mario\'s adventures, typically in the fictional Mushroom Kingdom with Mario as the player character.'),
+    ('Super Mario', 'ACT', "The Super Mario games follow Mario's adventures, typically in the fictional Mushroom Kingdom with Mario as the player character."),
     ('Beat Saber', 'MUG', 'Beat Saber is a 2018 virtual reality rhythm game created by Czech-based indie studio Hyperbolic Magnetism in which the player slashes blocks representing musical beats with a pair of energy blades resembling lightsabers.'),
     ('Sudoku','PZG', 'Sudoku is a logic-based, combinatorial number-placement puzzle.'),
     ('UNO', 'TAB', 'UNO is an American shedding-type card game that is played with a specially printed deck.'),
@@ -174,9 +174,5 @@ INSERT INTO rsvp (UID, EID, Time, Date)
     (1, 8, '12:00:00', '2018-11-4');
 
 
-<<<<<<< HEAD
--- TODO
-=======
 -- TODO
 
->>>>>>> database-pop
