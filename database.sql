@@ -89,10 +89,10 @@ DROP TABLE IF EXISTS creates_event;
 CREATE TABLE creates_event(
    EID               INTEGER AUTO_INCREMENT, -- should we maybe rename this since we already have an eid for employee?
    UID               INTEGER,
-   Name              CHAR(20) NOT NULL,
+   Name              VARCHAR(50) NOT NULL,
    Time              TIME,
    Date              DATE,
-   Location          CHAR(20),
+   Location          VARCHAR(50),
    Description       VARCHAR(1000),
    PRIMARY KEY (EID),
    FOREIGN KEY (UID) REFERENCES users(UID)
@@ -117,7 +117,7 @@ DROP TABLE IF EXISTS post;
 CREATE TABLE post( 
    PostID            INTEGER AUTO_INCREMENT,
    UID               INTEGER,
-   Location          CHAR(30),
+   Location          VARCHAR(100),
    Time              TIME,
    Date              DATE,
    Photo_File        VARCHAR(100),
@@ -156,9 +156,9 @@ CREATE TABLE user_comments_posts(
 DROP TABLE IF EXISTS groups;
 CREATE TABLE groups(
    GID               INTEGER AUTO_INCREMENT,
-   Name              CHAR(20),
+   Name              VARCHAR(100),
    Description       VARCHAR(1000),
-   Type              CHAR(20),
+   Type              VARCHAR(100),
    FounderID         INTEGER,
    Founder           CHAR(20), -- I think maybe we dont need this since founderId is the user that made said group
    PRIMARY KEY (GID),
@@ -193,10 +193,10 @@ CREATE TABLE group_contains_post(
 DROP TABLE IF EXISTS admins;
 CREATE TABLE admins(
    AID         INTEGER AUTO_INCREMENT,
-   Name        CHAR(20),
-   Title       CHAR(20),
-   Password    VARCHAR(20),
-   Username    VARCHAR(20),
+   Name        VARCHAR(100),
+   Title       VARCHAR(100),
+   Password    VARCHAR(100),
+   Username    VARCHAR(100),
    PRIMARY KEY (AID));
 
 DROP TABLE IF EXISTS admin_monitors_content;
