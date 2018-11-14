@@ -88,7 +88,7 @@ CREATE TABLE play(
 DROP TABLE IF EXISTS creates_event;
 CREATE TABLE creates_event(
    EID               INTEGER AUTO_INCREMENT, -- should we maybe rename this since we already have an eid for employee?
-   UID               INTEGER NOT NULL,
+   UID               INTEGER,
    Name              CHAR(20) NOT NULL,
    Time              TIME,
    Date              DATE,
@@ -109,7 +109,7 @@ CREATE TABLE rsvp(
    FOREIGN KEY (UID) REFERENCES users(UID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE,
-   FOREIGN KEY (EID) REFERENCES create_Events(EID)
+   FOREIGN KEY (EID) REFERENCES creates_event(EID)
                      ON DELETE CASCADE
                      ON UPDATE CASCADE);
 
