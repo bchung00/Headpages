@@ -24,11 +24,11 @@ if($res->m >0){
                 //Move file
 
                 move_uploaded_file($_FILES['file']['tmp_name'], $path);
-                clipImg($path, $Name);
+                clipImg($path, $_FILES["file"]['name']);
 
                 $num = $db->query("SELECT MAX(UID) as n from users");
                 $UID = mysqli_fetch_object($num) -> n + 1;
-                $db->query("INSERT INTO users (UID, UName, Password, Email, PhotoPath) VALUES('$UID','$Name','$Password', '$Email', '$path')");
+                $db->query("INSERT INTO users (UID, Name, Password, Email, PhotoPath) VALUES('$UID','$Name','$Password', '$Email', '$path')");
                 echo $db->error;
                 echo "success";
             } else
