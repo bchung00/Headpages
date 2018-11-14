@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Modify - HeadPages</title>
+   <link href="css/modify.css" rel="stylesheet">
+   <link href="css/navbar.css" rel="stylesheet">
+   <style></style>
+  <script src="modify.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li id="Head"><a>HeadPages</a></li>
+    	  <li class="nav"><a href="index.html">Home</a></li>
+        <li class="nav"><a href="browse.html">Browse</a></li>
+        <li class="nav"><a href="search.html">Search</a></li>
+        <li class="MyAccount"><a>My Account ▼</a>
+          <ul> 
+              <li class="upload"><a href="upload.html"><img class="symbol1" src="travel-images/symbols/upload.png" width="14%">Upload</a></li>
+              <li class="MAnav"><a href="my photos.html"><img class="symbol1" src="travel-images/symbols/myphotos.png" width="14%">My Photos</a></li>
+              <li class="MAnav"><a href="my favourites.html"><img class="symbol1" src="travel-images/symbols/favourite.png" width="14%">Favourite</a></li>
+              <li class="MAnav"><a href="index-before.html"><img class="symbol2" src="travel-images/symbols/logout.png" width="14%">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <article>
+    <div class="modify">
+        <table cellspacing="0" cellpadding="0">
+          <th>Modify Photo Information</th>
+          <tr>
+            <td><img width="300em" class="picture" id="picture"></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Photo Name..." name="name" id="title" class="input" /><br> </td>
+          </tr>
+          <tr>
+            <td><textarea rows="3" placeholder="Photo Description..."  name="description" id="description" class="input" /></textarea></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="City..." name="city" id="city" class="input" /><br> </td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Country..." name="country" id="country" class="input" readonly /><br> </td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Continent..." name="continent" id="continent" class="input" readonly/><br> </td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Latitude..." name="latitude" id="latitude"  class="input" /><br></td>
+          </tr>
+          <tr>
+            <td><input type="text" placeholder="Longitude..." name="longitude" id="longitude" class="input" /><br></td>
+          </tr>
+          <tr>
+            <td>
+              <a id="submit"><button id="btSubmit">Submit</button></a><a id="warning" style="color: #a94442"></a>
+            </td>
+          </tr>
+        </table>
+
+  </div>
+  </article>
+  <footer>
+    <nav class="end">
+      <hr/>
+      <ul>
+        <li><a>@2017 16SS All rights reserved.</a></li>
+        <li class="back"><a href="#"><img src="travel-images/symbols/arrow.png"> Back to top</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

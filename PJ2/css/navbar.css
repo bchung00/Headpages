@@ -1,0 +1,134 @@
+.navbar{
+	background-color: #222222;
+	float: left;
+	width: 100%;
+	z-index: 100;
+	position: relative;
+}
+.navbar ul li{
+	float: left;
+	list-style: none;
+}
+.navbar ul li a{
+	color: #A9A9A9;
+	text-decoration:none;
+	font-size: 1.2em;
+	font-family: "Geneva";
+	-moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+#Head{
+	background-color: #222222; 
+	color: #A9A9A9;
+	padding: 1% 1% 0% 1%;
+	font-size: 130%;
+	cursor: default;
+}
+#Head a{
+	font-family: "Apple Chancery";
+	font-weight: bold;
+}
+.MyAccount{
+	position: absolute;
+	right: 0%;
+	padding: 1.7% 1.5% 1.1% 1.5%;
+}
+.MyAccount:hover{
+	background-color: black;
+}
+.MyAccount:hover a{
+	color: white;
+	cursor: pointer;
+}
+.MyAccount ul{
+	display: none;
+}
+.MyAccount:hover ul{
+	text-align: left;
+	display:block; 
+	width:98.5%; 
+	position: absolute; 
+	right:0.3%;
+	top:100%; 
+	background-color:white;
+	border: #A9A9A9 1px solid;
+	border-top: none;
+	border-radius: 0 0 5% 5%;
+	z-index: 1000;
+}
+.MyAccount:hover ul li{
+	float: none;
+	padding: 0.2em 0em 0.2em 0em;
+	cursor: none;
+}
+.MyAccount:hover ul li a{
+	color: black;
+	font-size: 1.1em;
+	font-family: "Geneva";
+	cursor: none;
+}
+.MyAccount:hover ul .MAnav:hover{
+	background-color: #F5F5F5;
+}
+.MyAccount:hover ul .upload:hover{
+	background-color: #F5F5F5;
+}
+.MyAccount:hover .symbol1{
+	padding: 0.1em 0.3em 0em 0.2em;
+	vertical-align: text-top;
+}
+.MyAccount:hover .symbol2{
+	padding: 0.1em 0.3em 0em 0.2em;
+	vertical-align: text-top;
+}
+.Login{
+	position: absolute;
+	right: 0%;
+	width:10%;
+	padding: 1.7% 0.5% 1.1% 1%;
+	text-align: center;
+}
+.Login:hover{
+	background-color: black;
+}
+.Login:hover a{
+	color: white;
+	cursor: pointer;
+}
+.symbol-login{
+	width: 13%;
+	padding: 0 1% 0 1%;
+	vertical-align: text-top;
+}
+.nav{
+	padding: 1.7% 1.5% 1.2% 1.5%;
+}
+.nav:hover{
+	background-color: black;
+	font-style: white;
+}
+.nav:hover a{
+	color: white;
+}
+
+/*Footer*/
+.end{
+	float: left;
+	width: 100%;
+}
+.end ul li{
+	float: left;
+	list-style: none;
+}
+.end ul li a{
+	color: grey;
+	text-decoration:none;
+	font-size: 1.1em;
+	font-family: "Geneva";
+}
+.back{
+	position: absolute;
+	right: 1%;
+	cursor: pointer;
+}

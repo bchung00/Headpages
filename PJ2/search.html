@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Search - HeadPages</title>
+   <link href="css/search.css" rel="stylesheet">
+   <link href="css/navbar.css" rel="stylesheet">
+  <script src="search.js"></script>
+   <style></style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li id="Head"><a>HeadPages</a></li>
+    	  <li class="nav"><a href="index.html">Home</a></li>
+	      <li class="nav"><a href="browse.html">Browse</a></li>
+	      <li class="nav"><a href="#">Search</a></li>
+        <li class="MyAccount"><a>My Account ▼</a>
+          <ul> 
+              <li class="upload"><a href="upload.html"><img class="symbol1" src="travel-images/symbols/upload.png" width="14%">Upload</a></li>
+              <li class="MAnav"><a href="my photos.html"><img class="symbol1" src="travel-images/symbols/myphotos.png" width="14%">My Photos</a></li>
+              <li class="MAnav"><a href="my favourites.html"><img class="symbol1" src="travel-images/symbols/favourite.png" width="14%">Favourite</a></li>
+              <li class="MAnav"><a href="index-before.html"><img class="symbol2" src="travel-images/symbols/logout.png" width="14%">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <article>
+    <div class="search">
+      <table cellspacing="0" cellpadding="0">
+        <th>Search</th>
+        <tr><td><br></td></tr>
+        <tr>
+          <td><label><input name="Filter" type="radio" value="title" id="byTitle"/>&nbspFilter By Title</label></td>
+        </tr>
+        <tr>
+          <td><input type="text" name="Title" class="inputTitle" id="filterTitle"/><br></td>
+        </tr>
+        <tr>
+          <td><label><input name="Filter" type="radio" value="description" id="byDescription" />&nbspFilter By Description</label></td>
+        </tr>
+        <tr>
+          <td><textarea rows="2" name="Description" class="inputDescription" id="filterDescription" /></textarea></td>
+        </tr>
+        <tr>
+          <td><button type="submit" value="Filter" id="buttonFilter">Filter</button><a id="warning" style="color: #a94442"></a></td>
+        </tr>
+      </table>
+    </div>
+    <div class="main">
+      <dl>
+        <dt id="searchresults"><a>Search Result</a></dt>
+        <p id="hint">INPUT SOME KEYWORDS!</p>
+        <dt>
+          <a class="link"><img class="img"/></a>
+          <div class="description">
+            <a class="href"><h2 class="title"></h2></a>
+            <p class="description1"></p>
+          </div>
+        </dt>
+        <dt>
+          <a class="link"><img class="img"/></a>
+          <div class="description">
+            <a class="href"><h2 class="title"></h2></a>
+            <p class="description1"></p>
+          </div>
+        </dt>
+        <dt>
+          <a class="link"><img class="img"/></a>
+          <div class="description">
+            <a class="href"><h2 class="title"></h2></a>
+            <p class="description1"></p>
+          </div>
+        </dt>
+        <dt>
+          <a class="link"><img class="img"/></a>
+          <div class="description">
+            <a class="href"><h2 class="title"></h2></a>
+            <p class="description1"></p>
+          </div>
+        </dt>
+        <dt>
+          <a class="link"><img class="img"/></a>
+          <div class="description">
+            <a class="href"><h2 class="title"></h2></a>
+            <p class="description1"></p>
+          </div>
+        </dt>
+      </dl>
+      <div id="pages"></div>
+    </div>
+  </article>
+
+  <footer>
+    <nav class="end">
+      <hr/>
+      <ul>
+        <li><a>@2017 16SS All rights reserved.</a></li>
+        <li class="back"><a href="#"><img src="travel-images/symbols/arrow.png"> Back to top</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

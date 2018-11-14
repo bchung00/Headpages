@@ -1,0 +1,142 @@
+*{
+	margin: 0%;
+	padding: 0%;
+}
+
+/*Header*/
+header{
+	width: 100%;
+	min-width: 1020px;
+}
+
+/*Body*/
+body{
+    width: 100%;
+	height: 100%;
+    text-align: center;
+    min-width: 1020px;
+    position: relative;
+}
+.titles{
+	text-align: left;
+	width: 96%;
+	padding: 8% 0 1% 4%;
+	color: #828282;
+}
+#title{
+	font-size: 2em;
+}
+#vicetitle{
+	font-size: 1.5em;
+}
+.left{
+	float: left;
+	width: 56%;
+	height: 100%;
+	margin-left: 4%;
+}
+.right{
+	float: right;
+	width: 40%;
+	height: 100%;
+}
+#picture{
+
+	height:80%;
+	width: 80%;
+	border:2px solid #A9A9A9;
+	border-radius: 8px;
+	padding: 0.5%;
+	float: left;
+}
+.buttons{
+	position: relative;
+}
+#add{
+	border:1px solid #7DA5B7;
+	text-align: center;
+	font-size: 1.4em;
+	width: 100%;
+	min-width: 245px;
+	height: 40px;
+	border-radius:5px;
+	background: url(../travel-images/symbols/gift.png) no-repeat 5%;
+	background-color: #DAEDF5;
+	float: right;
+	color: #7DA5B7;
+	cursor: pointer;
+}
+#added {
+	border: 1px solid #90AC8C;
+	text-align: center;
+	font-size: 1.4em;
+	width: 100%;
+	min-width: 245px;
+	height: 40px;
+	border-radius: 5px;
+	background: url(../travel-images/symbols/gou.png) no-repeat 5%;
+	background-color: #DFF0D9;
+	float: right;
+	cursor: pointer;
+	color: #90AC8C;
+}
+#back1{
+	z-index: 200;
+	margin-right:20%; 
+	width: 65%;
+	height:40px;
+	float:right;
+}
+#back2{
+	margin-right:20%;
+	width: 65%;
+	height:40px;
+	float:left;
+	position: absolute;
+	right: 0%;
+}
+
+table{
+	width: 65%;
+	border:2px solid #DCDCDC;
+	border-radius: 5px;
+	float: right;
+	margin: 5% 20% 0% 20%;
+	text-align: left;
+}
+table th{
+	background-color: #F5F5F5;
+	font-size: 1em;
+	padding: 3% 0 3% 4%;
+	border-bottom:1px solid #EDEDED;
+	font-family: "Geneva";
+	border-radius: 5px 5px 0 0;
+}
+table td{
+	border-bottom: 1px solid #EDEDED;
+	background-color: white;
+	text-align: left;
+	padding: 2% 0 2% 4%;
+}
+#likeNumber{
+	font-size: 1.6em;
+	color: red;
+	text-align: center;
+	border-radius: 0 0 5px 5px;
+}
+#description{
+	width: 92%;
+	border:2px solid #A9A9A9;
+	border-radius: 8px;
+	margin: 36% 4% 3% 4%;
+	padding: 1%; 
+	text-align: left;
+	font-size: 1.2em;
+	font-family: "Geneva";
+}
+
+/*Footer*/
+footer{
+	width: 100%;
+	height: 10%;
+}

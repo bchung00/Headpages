@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Browse - Share Your Travels</title>
+   <link href="css/browse.css" rel="stylesheet">
+   <link href="css/navbar.css" rel="stylesheet">
+   <style></style>
+  <script src="filter.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li id="Head"><a>HeadPages</a></li>
+    	  <li class="nav"><a href="index.html">Home</a></li>
+	      <li class="nav"><a href="#">Browse</a></li>
+	      <li class="nav"><a href="search.html">Search</a></li>
+        <li class="MyAccount"><a>My Account ▼</a>
+          <ul> 
+              <li class="upload"><a href="upload.html"><img class="symbol1" src="travel-images/symbols/upload.png" width="14%">Upload</a></li>
+              <li class="MAnav"><a href="my photos.html"><img class="symbol1" src="travel-images/symbols/myphotos.png" width="14%">My Photos</a></li>
+              <li class="MAnav"><a href="my favourites.html"><img class="symbol1" src="travel-images/symbols/favourite.png" width="14%">Favourite</a></li>
+              <li class="MAnav"><a href="index-before.html"><img class="symbol2" src="travel-images/symbols/logout.png" width="14%">Logout</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <article>
+    <div class="all">
+      <div class="left">
+        <table cellspacing="0" cellpadding="0" class="tableSearch">
+          <th>Search</th>
+          <tr>
+            <td><label><input results="s" type="search" name="search" placeholder="by title..." class="search" /></label><button class="buttonSearch">&nbsp&nbsp</button></td>
+          </tr>
+        </table>
+        <table cellspacing="0" cellpadding="0" class="table2">
+          <th>Continents</th>
+          <tr><td><a>Africa</a></td></tr>
+          <tr><td><a>Antarctica</a></td></tr>
+          <tr><td><a>Asia</a></td></tr>
+          <tr><td><a>Europe</a></td></tr>
+          <tr><td><a>North America</a></td></tr>
+          <tr><td><a>Oceania</a></td></tr>
+          <tr><td><a>South America</a></td></tr>
+        </table>
+        <table cellspacing="0" cellpadding="0" class="table2">
+          <th>Popular Countries</th>
+          <tr><td><a>Bahamas</a></td></tr>
+          <tr><td><a>Canada</a></td></tr>
+          <tr><td><a>Germany</a></td></tr>
+          <tr><td><a>Ghana</a></td></tr>
+          <tr><td><a>Greece</a></td></tr>
+          <tr><td><a>Hungary</a></td></tr>
+          <tr><td><a>Italy</a></td></tr>
+          <tr><td><a>Spain</a></td></tr>
+          <tr><td><a>United Kingdom</a></td></tr>
+          <tr><td><a>United States</a></td></tr>
+        </table>
+      </div>
+      <div class="right">
+        <table cellspacing="0" cellpadding="0" class="filter">
+          <th>Filter</th>
+          <tr>
+            <td colspan="4" style="border-bottom: 1px solid #E0E0E0" id="row2">
+              <select id="country_sel" class="select1"><option value="" class="invisible">Filter by Country</option></select>
+              <select id="city_sel" class="select1"><option value="" class="invisible">Filter by City</option></select>
+              <button type="button" id="buttonFilter" disabled>Filter</button></a>
+            </td>
+          </tr>
+          <tr class="photos">
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+          </tr>
+          <tr class="photos">
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+          </tr>
+          <tr class="photos">
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+          </tr>
+          <tr class="photos">
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+            <td><a class="link"><img class="result"></a></td>
+          </tr>
+          <tr class="photos">
+            <td colspan="4">
+              <div id="pages">
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </article>
+  <footer>
+    <nav class="end">
+      <hr/>
+      <ul>
+        <li><a>@2017 16SS All rights reserved.</a></li>
+        <li class="back"><a href="#"><img src="travel-images/symbols/arrow.png"> Back to top</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>

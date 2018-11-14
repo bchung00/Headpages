@@ -1,0 +1,194 @@
+*{
+	margin: 0%;
+	padding: 0%;
+}
+
+/*Header*/
+header{
+	width: 100%;
+	height:5%;
+	min-width: 840px;
+}
+
+/*Body*/
+body{
+	height: 100%;
+    width: 100%;
+    min-width: 840px;
+}
+article{
+	padding: 7% 0.5% 2% 0.5%;
+	min-height: 650px;
+}
+
+table{
+	width: 100%;
+	border:3px solid #DCDCDC;
+	border-radius: 10px;
+}
+table th{
+	background-color: #F5F5F5;
+	text-align: left;
+	font-size: 1.5em;
+	padding: 0.5% 0 0.5% 2.2%;
+	border-bottom:2px solid #EDEDED;
+	font-family: "Geneva";
+	border-radius:10px 10px 0 0; 
+}
+table td{
+	background-color: white;
+	padding-left: 2.2%;
+	font-size: 1.1em;
+	border-radius: 0 0 10px 10px; 
+}
+.inputTitle, .inputDescription{
+    width: 95%;
+	height: 100%;
+	font-size: 1em;
+	font-family: "Verdana";
+	padding: 0.5% 1% 0.5% 1%;
+	margin: 0.5% 0 1% 0;
+	border: 0.5px solid #E0E0E0;
+	border-radius: 5px;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+}
+button{
+	border:none;
+	text-align: center;
+	font-size: 1em;
+	margin-bottom: 1%;
+	width: 10%;
+	height: 30px;
+	border-radius:8px;
+	background-color: #397BB2;
+	border-color: #397BB2; 
+	color: white;
+}
+button:hover{
+	background-color: #70A8D7;
+	border-color: #70A8D7; 
+	cursor: auto;
+}
+#searchresults{
+	height: 10%;
+	background-color: #DFF0D9;
+	width: 98%;
+	text-align: left;
+	font-size: 1.5em;
+	padding: 1% 0 1% 2%;
+	font-family: "Geneva";
+	color: #90AC8C;
+	border-radius: 8px 8px 0 0;
+	border-bottom: none;
+}
+.img{
+	width: 170px;
+	vertical-align: middle;
+	float: left;
+	margin-top: 3%;
+	margin-left: 4%;
+	margin-right: 4%;
+	padding-bottom: 0;
+}
+.title{
+	font-size: 1.5em;
+	font-family: "Trajan Pro";
+	color: #A1D1F9;
+}
+.href{
+	text-decoration: none;
+}
+.description{
+	text-align: left;
+	width: 100%;
+	height: 9.5em;
+    font-size:100%;
+}
+.description1 {
+	padding-left: 3%;
+	width: 65%;
+	font-family: "Calibri";
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 7;
+	-webkit-box-orient: vertical;
+}
+.main{
+	margin: 2% 0 3% 0;
+	padding: 0px;
+	float: left;
+	width: 99%;
+	border: 5px solid #90AC8C;
+	border-radius: 10px;
+	margin-bottom: 40px;
+}
+.main dl{
+	height: 10%;
+	font-size: 20px;
+}
+.main dt{
+	 display: none;
+ }
+.main dt a{
+	text-align: left;
+	font-size: 1em;
+	padding: 1% 0 1% 2%;
+	font-family: "Geneva";
+	color: #90AC8C;
+	padding-left: 10px;
+}
+.main dt:first-child{
+	display: block;
+	padding-top: 3px;
+	width: 100%;
+	height: 35px;
+	background-color: #DFF0D9;
+}
+.noResult{
+	margin-left: 50px;
+	font-size: 1.2em;
+}
+#hint{
+	margin-top:50px;
+	margin-bottom:50px;
+	text-align: center;
+	font-size: 1.2em;
+	color: grey;
+}
+#pages{
+	float: left;
+	text-align: center;
+	width: 20%;
+	margin-top: 3%;
+	margin-left: 44%;
+	margin-bottom: 20px;
+}
+.selected-pages{
+	background-color:#006699;
+	color: white;
+}
+#pages div{
+	float: left;
+	border: solid #E0E0E0 1px;
+	width: 30px;
+	height: 30px;
+
+}
+.page1{
+	background-color:#3A7AB4;
+	color: white;
+}
+#pages div:hover{
+	cursor: pointer;
+	background-color:#3A7AB4;
+	color: white;
+}
+
+
+/*Footer*/
+footer{
+	width: 100%;
+	height: 10%;
+}

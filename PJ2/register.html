@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="utf-8">
+   <title>Register - HeadPages</title>
+   <link href="css/register.css" rel="stylesheet">
+   <link href="css/navbar.css" rel="stylesheet">
+   <style></style>
+   <script src="register.js"></script>
+  <script>
+      function setImagePreview() {
+          var docObj=document.getElementById("file");
+
+          var imgObjPreview=document.getElementById("preview");
+          if(docObj.files && docObj.files[0]){
+              document.getElementById("pic").style.display = 'block';
+              imgObjPreview.style.width = '30%';
+              imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+          }else{
+              docObj.select();
+              var imgSrc = document.selection.createRange().text;
+              var localImagId = document.getElementById("localImag");
+              //Default size
+              localImagId.style.width = "300px";
+              localImagId.style.height = "120px";
+              //In case users upload non-pictures by changing the suffix of the file
+              try{
+                  localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                  localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+              }catch(e){
+                  alert("Wrong picture format!");
+                  return false;
+              }
+              imgObjPreview.style.display = 'none';
+              document.selection.empty();
+          }
+          return true;
+      }
+  </script>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <ul>
+        <li id="Head"><a>HeadPages</a></li>
+    	  <li class="nav"><a href="index-before.html">Home</a></li>
+        <li class="Login"><a href="login.html"><img class="symbol-login" src="travel-images/symbols/login.png" height="100%"> Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+  <article>
+    <div class="register">
+      <form id="registerForm">
+    <table>
+      <th>Register</th>
+      <tr>
+        <td><input type="text" placeholder="Email..." name="Email Address" class="input" id="email" /></td>
+      </tr>
+      <tr>
+        <td><input type="Password" placeholder="Password..." name="Password" class="input" id="password" /><br> </td>
+      </tr>
+      <tr>
+        <td><input type="Password" placeholder="Password Again..." name="Password" class="input" id="password2" /></td>
+      </tr>
+      <tr>
+        <td><input type="text" placeholder="Name..." name="Name" class="input" id="name" /></td>
+      </tr>
+      <tr>
+        <td><input type="file" name="file" class="input" id="file" onchange="javascript:setImagePreview();"/></td>
+      </tr>
+      <tr id="pic" style="display:none;background-color: white">
+        <td style="width: 100%;"><img id="preview" style="margin: 11px 23px"/></td>
+      </tr>
+      <tr>
+        <td>
+          <a><button id="submit">Submit</button></a><span id="warning" style="color: #a94442" class="text"></span><br>
+        </td>
+      </tr>
+    </table>
+      </form>
+  </div>
+  </article>
+  <footer>
+    <nav class="end">
+      <hr/>
+      <ul>
+        <li><a>@2017 16SS All rights reserved.</a></li>
+        <li class="back"><a href="#"><img src="travel-images/symbols/arrow.png"> Back to top</a></li>
+      </ul>
+    </nav>
+  </footer>
+</body>
+</html>
