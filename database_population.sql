@@ -261,7 +261,7 @@ INSERT INTO groups (GID, Name, Descriptor, Type, FounderID, Founder)
             (4, 4, 'Vancouver, BC, Canada', '00:01:50', '2018-01-04', NULL, 'Why am i still awake at this time?'),
             (5, 5, 'Cambridge, ON, Canada','08:12:17', '2018-01-05', '/photos/post5/jpeg', 'Great view'),
             (6, 6, 'Montreal, QB, Canada', '09:15:40', '2018-01-06', NULL, 'Anyone can help me fix my bike?'),
-            (7, 7, 'Queens, ON, Canada', '17:12:30', '2018-01-07', '/photos/post7/jpeg', NULL),
+            (7, 7, 'Queens, ON, Canada', '17:12:30', '2018-01-07', '/photos/post7/jpeg', NULL, 'I regreted that cup of coffee earlier'),
             (8, 8, 'Hamilton, ON, Canada', '22:12:21', '2018-01-08', NULL, 'I LOVE MY LIFE RN'),
             (9, 9, 'Victoria, BC, Cadana', '01:01:01', '2018-01-09', '/photos/post9/jpeg', 'I LOVE MY DOG'),
             (10, 10, 'Ottawa, ON, Canada','03:12:42', '2018-01-10', NULL, 'GOD BLESS CANADA'),
@@ -286,9 +286,29 @@ INSERT INTO groups (GID, Name, Descriptor, Type, FounderID, Founder)
             (27, 7, 'Calgary, AB, Canada', '23:12:12', '2018-07-20', NULL, 'Anyone suggestions on how to get started with trading forex?'),
             (28, 8, 'Toronto, ON, Canada', '12:42:12', '2018-08-20', '/photo/post28/jpeg', 'Had a great pre-game signing and interacting with fans'),
             (29, 9, 'Vancouver, BC, Canada', '17:32:12', '2018-09-20', NULL, 'Coming to Vancouver this friday, any suggestions where to get good asian food?'),
-            (30, 10, 'Vancouve, BC, Canada', '14:13:23', '2018-10-20', '/photo/post30/jpeg','Thank you for the volunteers and everyone that came to help out with the fundraising today'),
+            (30, 10, 'Vancouve, BC, Canada', '14:13:23', '2018-10-20', '/photo/post30/jpeg','Thank you for the volunteers and everyone that came to help out with the fundraising today');
 
-
+        INSERT INTO user_comments_posts(CommentID, UID, PostID, Text)
+            VALUE
+                (1, 1, 2, 'Awesome'),
+                (2, 2, 3, 'Me too! See you there!'),
+                (3, 3, 4, 'Go to sleep bro!'),
+                (4, 4, 5, 'Nice shot!'),
+                (5, 5, 6, 'There''s a bike shops near you that my friend own, let me send you the address!'),
+                (6, 6, 7, 'I know that feel :)' ),
+                (7, 7, 8, 'Proud of you buddy!');
+                (8 ,8 ,9, 'Such a cute dog you have there!'),
+                (9, 9, 10, 'Canada is the best!'),
+                (10, 10, 11, 'Such a beautiful view in your backyard!'),
+                (11, 11, 12, 'Keep warm buddy!'),
+                (12, 12, 13, 'Amazing!'),
+                (13, 13, 14, 'Haha that was 3 days ago girl!'),
+                (14, 14, 15, 'My favourite season too!'),
+                (15, 15, 16, 'Kelowna is the best!'),
+                (16, 16, 17, 'Cant''t believe it''s summer already'),
+                (17, 17, 18, 'I''m excited and anxious at the same time!'),
+                (18, 18, 19, 'Time to whip out the skis and snowboards!'),
+                (19, 19, 20, 'Thanks everyone that came out to help!');
 
 
 
