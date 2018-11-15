@@ -1,7 +1,7 @@
 
 var allPage = 1;
 
-fetch("browse.php?key=1").then(function (rsp) {
+fetch("browsePost.php?key=1").then(function (rsp) {
     return rsp.json();
 }).then(function (data) {
     var table = document.getElementsByClassName("filter");

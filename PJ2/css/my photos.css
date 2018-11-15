@@ -65,8 +65,8 @@ dd{
 	padding-top: 4%;
 }
 .main dt{
-	display: none;
-}
+	 display: none;
+ }
 .main dt:first-child{
 	display: block;
 }

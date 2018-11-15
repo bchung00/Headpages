@@ -6,7 +6,7 @@
    <link href="css/browse.css" rel="stylesheet">
    <link href="css/navbar.css" rel="stylesheet">
    <style></style>
-  <script src="filter.js"></script>
+  <script src="browse.js"></script>
 </head>
 <body>
   <header>
@@ -38,70 +38,76 @@
           </tr>
         </table>
         <table cellspacing="0" cellpadding="0" class="table2">
-          <th>Continents</th>
-          <tr><td><a>Africa</a></td></tr>
-          <tr><td><a>Antarctica</a></td></tr>
-          <tr><td><a>Asia</a></td></tr>
-          <tr><td><a>Europe</a></td></tr>
-          <tr><td><a>North America</a></td></tr>
-          <tr><td><a>Oceania</a></td></tr>
-          <tr><td><a>South America</a></td></tr>
+          <th>Discover</th>
+          <tr><td><a>Post</a></td></tr>
+          <tr><td><a>Group</a></td></tr>
+          <tr><td><a>Event</a></td></tr>
+          <tr><td><a>Game</a></td></tr>
         </table>
-        <table cellspacing="0" cellpadding="0" class="table2">
-          <th>Popular Countries</th>
-          <tr><td><a>Bahamas</a></td></tr>
-          <tr><td><a>Canada</a></td></tr>
-          <tr><td><a>Germany</a></td></tr>
-          <tr><td><a>Ghana</a></td></tr>
-          <tr><td><a>Greece</a></td></tr>
-          <tr><td><a>Hungary</a></td></tr>
-          <tr><td><a>Italy</a></td></tr>
-          <tr><td><a>Spain</a></td></tr>
-          <tr><td><a>United Kingdom</a></td></tr>
-          <tr><td><a>United States</a></td></tr>
+        <table cellspacing="0" cellpadding="0" class="table2" id="left2">
+          <th id="groupTitle">Group</th>
+          <tr><td><a class="title2"></a></td></tr>
+          <tr><td><a class="title2"></a></td></tr>
+          <tr><td><a class="title2"></a></td></tr>
+          <tr><td><a class="title2"></a></td></tr>
+          <tr><td><a class="title2"></a></td></tr>
+          <tr><td><a class="title2"></a></td></tr>
+          <tr><td><a>…………</a></td></tr>
+        </table>
+        <table cellspacing="0" cellpadding="0" class="table2" id="left3">
+          <th id="eventTitle">Event</th>
+          <tr><td><a class="title3"></a></td></tr>
+          <tr><td><a class="title3"></a></td></tr>
+          <tr><td><a class="title3"></a></td></tr>
+          <tr><td><a class="title3"></a></td></tr>
+          <tr><td><a class="title3"></a></td></tr>
+          <tr><td><a class="title3"></a></td></tr>
+          <tr><td><a>…………</a></td></tr>
         </table>
       </div>
       <div class="right">
-        <table cellspacing="0" cellpadding="0" class="filter">
-          <th>Filter</th>
-          <tr>
-            <td colspan="4" style="border-bottom: 1px solid #E0E0E0" id="row2">
-              <select id="country_sel" class="select1"><option value="" class="invisible">Filter by Country</option></select>
-              <select id="city_sel" class="select1"><option value="" class="invisible">Filter by City</option></select>
-              <button type="button" id="buttonFilter" disabled>Filter</button></a>
-            </td>
-          </tr>
-          <tr class="photos">
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-          </tr>
-          <tr class="photos">
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-          </tr>
-          <tr class="photos">
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-          </tr>
-          <tr class="photos">
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-            <td><a class="link"><img class="result"></a></td>
-          </tr>
-          <tr class="photos">
-            <td colspan="4">
-              <div id="pages">
+        <dl>
+          <dt id="postTitle"><a>Post</a></dt>
+          <dt>
+            <div id="selectLR">
+              <div class="button-group">
+                <a class="button primary pill selected" id="all">
+                  <span>All</span>
+                </a>
+                <a class="button pill" id="specific">
+                  <span>Friends</span>
+                </a>
+                <a class="button pill" id="mine">
+                  <span>Mine</span>
+                </a>
               </div>
-            </td>
-          </tr>
-        </table>
+            </div>
+          </dt>
+          <dt class="post">
+            <a class="link"><img class="img"/></a>
+            <div class="description">
+              <a class="href"><h3 class="title"></h3></a>
+              <p class="content"></p>
+              <img class="PostImg"/>
+            </div>
+          </dt>
+          <dt class="post">
+            <a class="link"><img class="img"/></a>
+            <div class="description">
+              <a class="href"><h3 class="title"></h3></a>
+              <p class="content"></p>
+              <img class="PostImg"/>
+            </div>
+          </dt>
+          <dt class="post">
+            <a class="link"><img class="img"/></a>
+            <div class="description" id="last">
+              <a class="href"><h3 class="title"></h3></a>
+              <p class="content"></p>
+              <img class="PostImg"/>
+            </div>
+          </dt>
+        </dl>
       </div>
     </div>
   </article>
