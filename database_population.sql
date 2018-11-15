@@ -1,26 +1,26 @@
 
 INSERT INTO users (UID, Name, Password, Email, PhotoPath)
     VALUES
-    (1, 'Jeff', 'superjeff', 'jeff@gmail.com', '/photos/jeff.jpeg'),
-    (2, 'Doug', 'dumbdoug', 'doug@gmail.com', '/photos/doug.jpeg'),
-    (3, 'Tom', 'bighattom', 'tom@gmail.com', '/photos/tom.jpeg'),
-    (4, 'Bob', 'onearmbob', 'bob@gmail.com', '/photos/bob.jpeg'),
-    (5, 'Joe', 'joeisdead', 'joe@gmail.com', '/photos/joe.jpeg'),
-    (6, 'Smith', 'agentsmith', 'smith@gmail.com', '/photos/smith.jpeg'),
-    (7, 'Matt', 'matthew', 'matt@gmail.com', '/photos/matt.jpeg'),
-    (8, 'Cup', 'mug', 'cup@gmail.com', '/photos/cup.jpeg'),
-    (9, 'Don', 'nob', 'don@gmail.com', '/photos/don.jpeg'),
-    (10, 'Donkey', 'kong', 'donkey@gmail.com', '/photos/donkey.jpeg'),
-    (11, 'Google', 'getmejerbs', 'google@gmail.com', '/photos/google.jpeg'),
-    (12, 'Amazon', 'jerbsplsbezos', 'amazon@gmail.com', '/photos/amazon.jpeg'),
-    (13, 'Microsoft', 'donatetomygofundme', 'microsoft@gmail.com', '/photos/microsoft.jpeg'),
-    (14, 'Redhat', 'nolinux', 'redhat@gmail.com', '/photos/redhat.jpeg'),
-    (15, 'Trump', 'maga', 'maga@gmail.com', '/photos/maga.jpeg'),
-    (16, 'Youtube', 'likecommentsubscribe', 'youtube@gmail.com', '/photos/youtube.jpeg'),
-    (17, 'Facebook', 'praiseourlizardmanceo', 'facebook@gmail.com', '/photos/facebook.jpeg'),
-    (18, 'Apple', 'ilikeorangesmore', 'apple@gmail.com', '/photos/apple.jpeg'),
-    (19, 'Uber', 'getinvancouveralready', 'uber@gmail.com', '/photos/uber.jpeg'),
-    (20, 'SpaceX', 'elonisamartian', 'spacex@gmail.com', '/photos/spacex.jpeg');
+    (1, 'Jeff', 'superjeff', 'jeff@gmail.com', 'photos/jeff.jpeg'),
+    (2, 'Doug', 'dumbdoug', 'doug@gmail.com', 'photos/doug.jpeg'),
+    (3, 'Tom', 'bighattom', 'tom@gmail.com', 'photos/tom.jpeg'),
+    (4, 'Bob', 'onearmbob', 'bob@gmail.com', 'photos/bob.jpeg'),
+    (5, 'Joe', 'joeisdead', 'joe@gmail.com', 'photos/joe.jpeg'),
+    (6, 'Smith', 'agentsmith', 'smith@gmail.com', 'photos/smith.jpeg'),
+    (7, 'Matt', 'matthew', 'matt@gmail.com', 'photos/matt.jpeg'),
+    (8, 'Cup', 'mug', 'cup@gmail.com', 'photos/cup.jpeg'),
+    (9, 'Don', 'nob', 'don@gmail.com', 'photos/don.jpeg'),
+    (10, 'Donkey', 'kong', 'donkey@gmail.com', 'photos/donkey.jpeg'),
+    (11, 'Google', 'getmejerbs', 'google@gmail.com', 'photos/google.jpeg'),
+    (12, 'Amazon', 'jerbsplsbezos', 'amazon@gmail.com', 'photos/amazon.jpeg'),
+    (13, 'Microsoft', 'donatetomygofundme', 'microsoft@gmail.com', 'photos/microsoft.jpeg'),
+    (14, 'Redhat', 'nolinux', 'redhat@gmail.com', 'photos/redhat.jpeg'),
+    (15, 'Trump', 'maga', 'maga@gmail.com', 'photos/maga.jpeg'),
+    (16, 'Youtube', 'likecommentsubscribe', 'youtube@gmail.com', 'photos/youtube.jpeg'),
+    (17, 'Facebook', 'praiseourlizardmanceo', 'facebook@gmail.com', 'photos/facebook.jpeg'),
+    (18, 'Apple', 'ilikeorangesmore', 'apple@gmail.com', 'photos/apple.jpeg'),
+    (19, 'Uber', 'getinvancouveralready', 'uber@gmail.com', 'photos/uber.jpeg'),
+    (20, 'SpaceX', 'elonisamartian', 'spacex@gmail.com', 'photos/spacex.jpeg');
 
 
 
@@ -168,38 +168,38 @@ INSERT INTO groups (GID, Name, Description, Type, FounderID, Founder)
 
 INSERT INTO post(PostID, UID, Location, Time, Date, Photo_File, Text)
     VALUES
-        (1, 1, 'Vancouver, BC, Canada', '16:10:20', '2018-01-01', '/photos/post1.jpeg', 'First photo ever!' ),
-        (2, 2, 'Yellow Knife, BC, Canada', '21:11:30', '2018-01-02', '/photos/post2.jpeg', 'Saw the northen lights for the first time'),
+        (1, 1, 'Vancouver, BC, Canada', '16:10:20', '2018-01-01', 'photos/post1.jpeg', 'First photo ever!' ),
+        (2, 2, 'Yellow Knife, BC, Canada', '21:11:30', '2018-01-02', 'photos/post2.jpeg', 'Saw the northen lights for the first time'),
         (3, 3, 'Toronto, ON, Canada', '13:11:11', '2018-01-03', NULL, 'Excited to see the blue jays game tonight'),
         (4, 4, 'Vancouver, BC, Canada', '00:01:50', '2018-01-04', NULL, 'Why am i still awake at this time?'),
-        (5, 5, 'Cambridge, ON, Canada','08:12:17', '2018-01-05', '/photos/post5.jpeg', 'Great view'),
+        (5, 5, 'Cambridge, ON, Canada','08:12:17', '2018-01-05', 'photos/post5.jpeg', 'Great view'),
         (6, 6, 'Montreal, QB, Canada', '09:15:40', '2018-01-06', NULL, 'Anyone can help me fix my bike?'),
-        (7, 7, 'Queens, ON, Canada', '17:12:30', '2018-01-07', '/photos/post7.jpeg', 'I regreted that cup of coffee earlier'),
+        (7, 7, 'Queens, ON, Canada', '17:12:30', '2018-01-07', 'photos/post7.jpeg', 'I regreted that cup of coffee earlier'),
         (8, 8, 'Hamilton, ON, Canada', '22:12:21', '2018-01-08', NULL, 'I LOVE MY LIFE RN'),
-        (9, 9, 'Victoria, BC, Cadana', '01:01:01', '2018-01-09', '/photos/post9.jpeg', 'I LOVE MY DOG'),
+        (9, 9, 'Victoria, BC, Cadana', '01:01:01', '2018-01-09', 'photos/post9.jpeg', 'I LOVE MY DOG'),
         (10, 10, 'Ottawa, ON, Canada','03:12:42', '2018-01-10', NULL, 'GOD BLESS CANADA'),
 
         (11, 1, 'Calgary, AB, Canada', '05:12:10', '2018-02-02', NULL, 'Beautiful day in Calgary'),
         (12, 2, 'St.John, NB, Canada', '12:12:12', '2018-11-11', NULL, 'Bless the weather in New Brunswick'),
-        (13, 3, 'Saskatoon, SK, Canada', '17:17:28', '2018-03-03', '/photos/post12.jpeg', 'Beautiful Saskatoon'),
+        (13, 3, 'Saskatoon, SK, Canada', '17:17:28', '2018-03-03', 'photos/post12.jpeg', 'Beautiful Saskatoon'),
         (14, 4, 'Edmonton, AB, Canada', '19:39:59', '2018-04-04', NULL, 'Oops did I missed April Fools Day?'),
-        (15, 5, 'Winnepeg, MN, Canada', '12:42:12', '2018-05-05', '/photos/post15.jpeg', 'I love fall weather!'),
+        (15, 5, 'Winnepeg, MN, Canada', '12:42:12', '2018-05-05', 'photos/post15.jpeg', 'I love fall weather!'),
         (16, 6, 'Kelowna, BC, Canada', '22:42:12', '2018-06-06', NULL, 'I love being in wine city of canada' ),
         (17, 7, 'Guelph, ON, Canada','09:12:32', '2018-07-07', NULL, 'Summer in Guelph is the best'),
         (18, 8, 'Regina, SK, Canada', '08:15:40', '2018-08-08', NULL, 'CANT WAIT FOR THE NEW SEMESTER!!'),
-        (19, 9, 'London, ON, Canada','12:12:32', '2018-09-09', '/photos/post19.jpeg', 'Cant believe summer is almost over'),
-        (20, 10, 'Halifax, NS, Canada', '23:23:12', '2018-10-10', '/photos/post20.jpeg', 'Winter Ball Charity Fundraising'),
+        (19, 9, 'London, ON, Canada','12:12:32', '2018-09-09', 'photos/post19.jpeg', 'Cant believe summer is almost over'),
+        (20, 10, 'Halifax, NS, Canada', '23:23:12', '2018-10-10', 'photos/post20.jpeg', 'Winter Ball Charity Fundraising'),
 
         (21, 1, 'Vancouver, BC, Canada', '13:31:33', '2018-01-20',NULL, 'Welcome to Vancouver Sneakerhead Group'),
-        (22, 2, 'Prince Edward Island, NS, Canada','12:12:12','2018-02-20','/photos/post22.jpeg','Today at Headpages HQ'),
+        (22, 2, 'Prince Edward Island, NS, Canada','12:12:12','2018-02-20','photos/post22.jpeg','Today at Headpages HQ'),
         (23, 3, 'Toronton, ON, Canada', '14:43:21','2018-03-20', NULL, 'Which anime are you guys most looked forward for this summer?'),
-        (24, 4, 'Ottawa, ON, Canada','12:43:12','2018-04-20','/photos/post24.jpeg','Our very first jam night this friday, JOIN US!'),
+        (24, 4, 'Ottawa, ON, Canada','12:43:12','2018-04-20','photos/post24.jpeg','Our very first jam night this friday, JOIN US!'),
         (25, 5, 'Edmonton, AB, Canada', '12:54:12','2018-05-20', NULL, 'Looking for a gym buddy at 24HR fitness downtown Edmonton. hmu'),
-        (26, 6, 'St.Johns, NB, Canada', '15:32:12','2018-06-20', '/photos/post26.jpeg', 'Come out this friday to learn about bitcoin!'),
+        (26, 6, 'St.Johns, NB, Canada', '15:32:12','2018-06-20', 'photos/post26.jpeg', 'Come out this friday to learn about bitcoin!'),
         (27, 7, 'Calgary, AB, Canada', '23:12:12', '2018-07-20', NULL, 'Anyone suggestions on how to get started with trading forex?'),
-        (28, 8, 'Toronto, ON, Canada', '12:42:12', '2018-08-20', '/photos/post28.jpeg', 'Had a great pre-game signing and interacting with fans'),
+        (28, 8, 'Toronto, ON, Canada', '12:42:12', '2018-08-20', 'photos/post28.jpeg', 'Had a great pre-game signing and interacting with fans'),
         (29, 9, 'Vancouver, BC, Canada', '17:32:12', '2018-09-20', NULL, 'Coming to Vancouver this friday, any suggestions where to get good asian food?'),
-        (30, 10, 'Vancouve, BC, Canada', '14:13:23', '2018-10-20', '/photos/post30.jpeg','Thank you for the volunteers and everyone that came to help out with the fundraising today');
+        (30, 10, 'Vancouve, BC, Canada', '14:13:23', '2018-10-20', 'photos/post30.jpeg','Thank you for the volunteers and everyone that came to help out with the fundraising today');
 
 INSERT INTO group_contains_post(GID, PostID)
     VALUES
