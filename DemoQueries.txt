@@ -1,3 +1,10 @@
 View and aggregate: View of the aggregation of groups and their count of posts and members.
 
 Division: ???
+
+Come up with queries for demo
+
+Jiali: Webpages
+Brandon: View & aggregate SQL query, send to Jiali. QA.
+Cole: Create list of things to do. Quality assurance. 
+Adle: Update ER diagram/formal specification. Marking scheme. QA.
