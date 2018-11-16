@@ -6,5 +6,13 @@ Come up with queries for demo
 
 Jiali: Webpages
 Brandon: View & aggregate SQL query, send to Jiali. QA.
+CREATE VIEW group_popularity AS
+    SELECT G.name, COUNT(*)
+    FROM groups G
+    JOIN group_contains_user GCU ON G.GID = GCU.GID
+    GROUP BY G.GID
+    ORDER BY COUNT(*) DESC;
+
+
 Cole: Create list of things to do. Quality assurance. 
 Adle: Update ER diagram/formal specification. Marking scheme. QA.
