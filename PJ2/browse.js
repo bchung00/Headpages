@@ -7,6 +7,8 @@ window.addEventListener("load", function () {
         var link = document.getElementsByClassName("link");
         var content = document.getElementsByClassName("content");
         var PostImg = document.getElementsByClassName("PostImg");
+        var post = document.getElementsByClassName("post");
+        var description = document.getElementsByClassName("description");
 
         function getCookie(c_name)
         {
@@ -59,7 +61,27 @@ window.addEventListener("load", function () {
                 console.log(result);
                 var obj = JSON.parse(result);
 
-                if (obj.length != 0) {
+                if(result=="[]"){
+                    title[0].innerText = "No result";
+
+                    for(var i = 0; i < 3;i++){
+                        img[i].setAttribute("hidden","hidden");
+                        PostImg[i].setAttribute("hidden","hidden");
+                        content[i].setAttribute("hidden","hidden");
+                        description[i].style.borderBottomColor = "#FFFFFF";
+                        if(i < 2)
+                            title[i +1 ].setAttribute("hidden","hidden");
+                    }
+
+                }else if (obj.length != 0) {
+                    title[0].className = "title";
+                    for(var i=0; i<3;i++){
+                        content[i].removeAttribute("hidden");
+                        img[i].removeAttribute("hidden");
+                        PostImg[i].removeAttribute("hidden");
+                        title[i].removeAttribute("hidden");
+                        description[i].style.borderBottomColor = "#EDEDED";
+                    }
                     for (var i = 0; i < obj.length; i++) {
                         if(obj[i]["PhotoPath"] != null) {
                             img[i].setAttribute("src", obj[i]["PhotoPath"]);
@@ -76,6 +98,10 @@ window.addEventListener("load", function () {
                             PostImg[i].removeAttribute("src");
                         }
 
+                    }
+                }else{
+                    for (var i = 0; i < 3; i++) {
+                        post[i].style.display="none";
                     }
                 }
             };

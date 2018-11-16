@@ -33,31 +33,29 @@
         <th>Search</th>
         <tr><td><br></td></tr>
         <tr>
-          <td><label><input name="Filter" type="radio" value="title" id="byTitle"/>&nbspFilter By Title</label></td>
+          <td><label><input name="Filter" type="radio" value="title" id="byPost" class="ratio"/>&nbspPost</label>
+            <label><input name="Filter" type="radio" value="title" id="byGroup" class="ratio"/>&nbspGroup</label>
+            <label><input name="Filter" type="radio" value="title" id="byEvent" class="ratio"/>&nbspEvent</label>
+            <label><input name="Filter" type="radio" value="title" id="byUser" class="ratio"/>&nbspUser</label></td>
         </tr>
         <tr>
           <td><input type="text" name="Title" class="inputTitle" id="filterTitle"/><br></td>
         </tr>
         <tr>
-          <td><label><input name="Filter" type="radio" value="description" id="byDescription" />&nbspFilter By Description</label></td>
-        </tr>
-        <tr>
-          <td><textarea rows="2" name="Description" class="inputDescription" id="filterDescription" /></textarea></td>
-        </tr>
-        <tr>
-          <td><button type="submit" value="Filter" id="buttonFilter">Filter</button><a id="warning" style="color: #a94442"></a></td>
+          <td><button type="submit" value="Search" id="buttonSearch">Search</button><a id="warning" style="color: #a94442"></a></td>
         </tr>
       </table>
     </div>
     <div class="main">
       <dl>
-        <dt id="searchresults"><a>Search Result</a></dt>
+        <dt id="searchResults"><a>Search Result</a></dt>
         <p id="hint">INPUT SOME KEYWORDS!</p>
         <dt>
           <a class="link"><img class="img"/></a>
           <div class="description">
             <a class="href"><h2 class="title"></h2></a>
             <p class="description1"></p>
+            <img class="PostImg"/>
           </div>
         </dt>
         <dt>
@@ -65,6 +63,7 @@
           <div class="description">
             <a class="href"><h2 class="title"></h2></a>
             <p class="description1"></p>
+            <img class="PostImg"/>
           </div>
         </dt>
         <dt>
@@ -72,6 +71,16 @@
           <div class="description">
             <a class="href"><h2 class="title"></h2></a>
             <p class="description1"></p>
+            <img class="PostImg"/>
+          </div>
+        </dt>
+
+        <dt>
+          <a class="link"><img class="img"/></a>
+          <div class="description">
+            <a class="href"><h2 class="title"></h2></a>
+            <p class="description1"></p>
+            <img class="PostImg"/>
           </div>
         </dt>
         <dt>
@@ -79,13 +88,7 @@
           <div class="description">
             <a class="href"><h2 class="title"></h2></a>
             <p class="description1"></p>
-          </div>
-        </dt>
-        <dt>
-          <a class="link"><img class="img"/></a>
-          <div class="description">
-            <a class="href"><h2 class="title"></h2></a>
-            <p class="description1"></p>
+            <img class="PostImg"/>
           </div>
         </dt>
       </dl>

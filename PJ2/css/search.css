@@ -41,6 +41,9 @@ table td{
 	font-size: 1.1em;
 	border-radius: 0 0 10px 10px; 
 }
+.ratio{
+	margin-left: 2%;
+}
 .inputTitle, .inputDescription{
     width: 95%;
 	height: 100%;
@@ -53,6 +56,7 @@ table td{
 	-webkit-border-radius:5px;
 	-moz-border-radius:5px;
 }
+
 button{
 	border:none;
 	text-align: center;
@@ -70,7 +74,7 @@ button:hover{
 	border-color: #70A8D7; 
 	cursor: auto;
 }
-#searchresults{
+#searchResults{
 	height: 10%;
 	background-color: #DFF0D9;
 	width: 98%;
@@ -102,7 +106,6 @@ button:hover{
 .description{
 	text-align: left;
 	width: 100%;
-	height: 9.5em;
     font-size:100%;
 }
 .description1 {
@@ -114,6 +117,10 @@ button:hover{
 	display: -webkit-box;
 	-webkit-line-clamp: 7;
 	-webkit-box-orient: vertical;
+}
+.PostImg{
+	width: 30%;
+	padding: 1% 55% 0 15%;
 }
 .main{
 	margin: 2% 0 3% 0;
