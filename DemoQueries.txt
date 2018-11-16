@@ -1,0 +1,3 @@
+View and aggregate: View of the aggregation of groups and their count of posts and members.
+
+Division: ???
