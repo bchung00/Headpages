@@ -2,6 +2,11 @@ ERD:
     - Removed Members entity
         - Changed to a relation called group_contains_users which defines which users are in a group 
     - Added attributes to Comments entity
+    - Added attributes to Groups entity
+    - Added attributes to Post entity
+    - Added attributes to Users entity
+    - Added attributes to Admins entity
+    - Extended aggregateion to Users entity
     - Play relation now points to Common User instead of Users as Companies can't play games. 
 
 Database:
