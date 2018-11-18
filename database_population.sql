@@ -257,7 +257,7 @@ INSERT INTO group_contains_user(UID, GID)
         (7, 9),
         (8, 10),
         (9, 1),
-        (10, 2)
+        (10, 2),
 
         (1, 4),
         (2, 5),
