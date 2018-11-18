@@ -1,0 +1,8 @@
+ERD:
+    - Removed Members entity
+        - Changed to a relation called group_contains_users which defines which users are in a group 
+    - Added attributes to Comments entity
+    - Play relation now points to Common User instead of Users as Companies can't play games. 
+
+Database:
+    - Reflected changes to ERD in database table creation SQL queries
