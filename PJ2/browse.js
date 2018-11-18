@@ -13,11 +13,7 @@ window.addEventListener("load", function () {
         var home = document.getElementById("home");
         var uid = getCookie("uid");
         home.setAttribute("href","personalPage.html?uid="+uid);
-        if(uid==""){
-            document.getElementById("selectLR").style.display = "none";
-        }else{
-            document.getElementById("selectLR").style.display = "block";
-        }
+
 
         function getCookie(c_name)
         {
@@ -133,7 +129,7 @@ window.addEventListener("load", function () {
             if (obj.length != 0) {
                 for (var i = 0; i < obj.length; i++) {
                     title[i].innerText = obj[i]["Name"];
-                    //title[i].setAttribute("href", "detail.html?id=" + obj[i]["GID"]);
+                    title[i].setAttribute("href", "group.html");
                 }
             }
         };

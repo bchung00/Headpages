@@ -1,10 +1,6 @@
-/**
- * Created by Chanyeol on 2017/6/20.
- */
 window.addEventListener("load", function() {
     var password = document.getElementById("password");
     var password2 = document.getElementById("password2");
-    var name = document.getElementById("name");
     var email = document.getElementById("email");
     var submit = document.getElementById("submit");
 
@@ -21,6 +17,14 @@ window.addEventListener("load", function() {
         type = companyType.value;
         typeInput.style.visibility = "visible";
     });
+
+    function setCookie(c_name,value,expiredays)
+    {
+        var exdate=new Date()
+        exdate.setDate(exdate.getDate()+expiredays)
+        document.cookie=c_name+ "=" + value +
+            ((expiredays==null) ? "" : ";expires="+exdate.toGMTString())
+    }
 
     submit.addEventListener("click", function () {
         if(type != null){
@@ -41,11 +45,13 @@ window.addEventListener("load", function() {
                     xhr.send(formData);
                     xhr.onload = function () {
                         var res = xhr.responseText;
+                        var resInfo = res.split("=");
                         console.log(res);
-                        if (res == "success") {
-                            window.location.href = "index.html";
+                        if (resInfo[0] == "success") {
+                            setCookie("uid", resInfo[1],1);
+                            window.location.href = "browse.html";
                         } else
-                            warning.innerText = " * " + res;
+                            document.getElementById("warning").innerHTML = " * " + res;
                     }
                 }
             } else {

@@ -1,6 +1,3 @@
-/**
- * Created by Chanyeol on 2017/6/25.
- */
 window.addEventListener("load", function () {
     var bt = document.getElementById("buttonSearch");
     var pic = document.getElementsByClassName("img");
@@ -8,7 +5,6 @@ window.addEventListener("load", function () {
     var title = document.getElementsByTagName("h2");
     var num = document.getElementsByTagName("dt");
     var description = document.getElementsByTagName("p");
-    var page = document.getElementById("pages");
     var xhr = new XMLHttpRequest();
     var link = document.getElementsByClassName("link");
     var PostImg = document.getElementsByClassName("PostImg");
@@ -43,9 +39,6 @@ window.addEventListener("load", function () {
             description[i].innerText = "";
             num[i + 1].style.display = "none";
             link[i].removeAttribute("href")
-        }
-        while (page.firstChild){
-            page.removeChild(page.firstChild);
         }
     }
 
@@ -106,8 +99,8 @@ window.addEventListener("load", function () {
                         pic[i].removeAttribute("src");
 
                         title[i].innerText = obj[i]["Name"];
-                        //hre[i].setAttribute("href", "detail.html?gid=" + obj[i]["GID"]);
-                        //link[i].setAttribute("href", "detail.html?gid=" + obj[i]["GID"]);
+                        hre[i].setAttribute("href", "group.html");
+                        link[i].setAttribute("href", "group.html");
                         content[i].removeAttribute("hidden");
                         if (obj[i]["Description"] == null) {
                             content[i].innerText = "No Description.";

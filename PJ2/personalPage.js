@@ -111,9 +111,14 @@ window.addEventListener("load", function () {
                 for (var i = 0; i < obj.length; i++) {
                     group[i + 6].style.display = "block";
                     title[i].innerText = obj[i]["Name"];
-                    //title[i].setAttribute("href", "detail.html?gid=" + obj[i]["GID"]);
+                    title[i].setAttribute("href", "group.html");
                 }
                 for(var j = 11; j >= 6 + obj.length; j--){
+                    group[j].style.display = "none";
+
+                }
+            }else{
+                for(var j = 11; j >= 6; j--){
                     group[j].style.display = "none";
 
                 }
@@ -142,6 +147,10 @@ window.addEventListener("load", function () {
                     //title[i].setAttribute("href", "detail.html?eid=" + obj[i]["EID"]);
                 }
                 for(var j = 18; j >= 13 + obj.length; j--){
+                    event[j].style.display = "none";
+                }
+            }else{
+                for(var j = 18; j >= 13; j--){
                     event[j].style.display = "none";
                 }
             }

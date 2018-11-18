@@ -36,13 +36,13 @@ if($res->m >0){
                     case "User":
                         $db->query("INSERT INTO common_users (UID) VALUES('$UID')");
                         echo $db->error;
-                        echo "success";
+                        echo "success=" . $UID;
                         break;
 
                     case "Company":
                         $db->query("INSERT INTO company (CID, Type) VALUES('$UID','$typeInput')");
                         echo $db->error;
-                        echo "success";
+                        echo "success=" . $UID;
                         break;
                 }
             } else

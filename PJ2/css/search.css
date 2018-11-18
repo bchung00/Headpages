@@ -151,7 +151,7 @@ button:hover{
 	padding-bottom: 1%;
 }
 
-.type{
+.type, .count{
 	width:20%;
 	float:right;
 	font: bold 1em "Geneva";

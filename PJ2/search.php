@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: Chanyeol
- * Date: 2017/6/25
- * Time: 下午2:48
- */
 
 include 'connect.php';
 
