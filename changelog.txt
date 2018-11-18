@@ -6,7 +6,7 @@ ERD:
     - Added attributes to Post entity
     - Added attributes to Users entity
     - Added attributes to Admins entity
-    - Extended aggregateion to Users entity
+    - Extended aggregation to Users entity
     - Play relation now points to Common User instead of Users as Companies can't play games. 
 
 Database:
