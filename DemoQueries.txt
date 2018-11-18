@@ -1,4 +1,56 @@
-View and aggregate: View of the aggregation of groups and their count of posts and members.
+SELECT: The SELECT query is used in our search functionality. The example SQL is taken from searching posts for keyword. 
+
+        SELECT * 
+            FROM post, users 
+            WHERE post.UID = users.UID and post.Text 
+            LIKE '%".$post."%' limit 5";
+
+INSERT: The INSERT query is demonstrated with our register user functionality. 
+        Attempt logging in with a user that does not exist, for example:
+            user: abc@gmail.com 
+            pass: abc123
+        Then register with those credentials. Then try logging in again.
+
+        SQL from our PHP function. 
+            INSERT INTO users (UID, Name, Password, Email, PhotoPath) 
+                VALUES('$UID','$Name','$Password', '$Email', '$path');
+
+DELETE: The DELETE query is demonstrated by allowing posts to be deletable.
+        Click delete on a post. It will disappear from the UI. Confirm that the tuple was deleted in the backend Posts table.
+        SQL from PHP function.
+            DELETE FROM post 
+            WHERE PostID='{$PostID};
+
+UPDATE: The UPDATE query is demonstrated by allowing posts to be modified.
+        Click modify on a post, then change the parameters and save changes. Confirm in the UI and database table Posts that the post/tuple was updated.
+        SQL from PHP function.
+            UPDATE post 
+            SET Location = '{$location}', 
+                Time = '{$time}', 
+                Date = '{$date}', 
+                Text = '{$text}' 
+            WHERE PostID='{$PostID}';
+
+JOIN, VIEW, Aggregation: All three queries are demonstrated with a page containing a table of the most popular groups.
+        The table shows the most popular groups in descending order based on number of members, which requires a JOIN to get, and a COUNT() aggregation for number of members.
+        It is created as a VIEW as such information would likely be commonly accessed/used by users and site adminstrators.
+
+        SQL from PHP function:
+        CREATE VIEW group_popularity AS
+            SELECT G.name, COUNT(*)
+            FROM groups G
+            JOIN group_contains_user GCU ON G.GID = GCU.GID
+            GROUP BY G.GID
+            ORDER BY COUNT(*) DESC;
+
+DIVISION: 
+
+
+
+
+
+
+
 
 Division: ???
 
