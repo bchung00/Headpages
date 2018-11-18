@@ -17,7 +17,7 @@ body{
     min-width: 840px;
 }
 article{
-	padding: 7% 0.5% 2% 0.5%;
+	padding: 7% 10% 2% 10%;
 	min-height: 650px;
 }
 
@@ -41,6 +41,8 @@ table td{
 	font-size: 1.1em;
 	border-radius: 0 0 10px 10px; 
 }
+
+
 .ratio{
 	margin-left: 2%;
 }
@@ -86,42 +88,8 @@ button:hover{
 	border-radius: 8px 8px 0 0;
 	border-bottom: none;
 }
-.img{
-	width: 170px;
-	vertical-align: middle;
-	float: left;
-	margin-top: 3%;
-	margin-left: 4%;
-	margin-right: 4%;
-	padding-bottom: 0;
-}
-.title{
-	font-size: 1.5em;
-	font-family: "Trajan Pro";
-	color: #A1D1F9;
-}
-.href{
-	text-decoration: none;
-}
-.description{
-	text-align: left;
-	width: 100%;
-    font-size:100%;
-}
-.description1 {
-	padding-left: 3%;
-	width: 65%;
-	font-family: "Calibri";
-	overflow: hidden;
-	text-overflow: ellipsis;
-	display: -webkit-box;
-	-webkit-line-clamp: 7;
-	-webkit-box-orient: vertical;
-}
-.PostImg{
-	width: 30%;
-	padding: 1% 55% 0 15%;
-}
+
+
 .main{
 	margin: 2% 0 3% 0;
 	padding: 0px;
@@ -129,23 +97,83 @@ button:hover{
 	width: 99%;
 	border: 5px solid #90AC8C;
 	border-radius: 10px;
-	margin-bottom: 40px;
 }
-.main dl{
-	height: 10%;
-	font-size: 20px;
+.info{
+	width: 96%;
+	padding: 1% 2%;
 }
-.main dt{
-	 display: none;
- }
-.main dt a{
+.img{
+	width: 70px;
+	height: 70px;
+	vertical-align: middle;
+	float: left;
+	margin-left: 4%;
+	margin-right: 4%;
+}
+.title{
+	font-size: 1.5em;
+	font-family: "Trajan Pro";
+	color: #A1D1F9;
+	width: 98%;
+	margin-left: 2%;
+	float: right;
+}
+.href{
+	text-decoration: none;
+}
+.description{
 	text-align: left;
-	font-size: 1em;
-	padding: 1% 0 1% 2%;
-	font-family: "Geneva";
-	color: #90AC8C;
-	padding-left: 10px;
+	float: left;
+	font-size: 100%;
+	padding: 2% 0 2% 0;
+	border-bottom: 2px solid #EDEDED;
+	width: 80%;
 }
+.description1 {
+	width: 90%;
+	padding:3% 5% 1% 5%;
+	margin-top: 0.5em;
+	font-size: 1em;
+	font-family: "Geneva";
+}
+.post{
+	width: 96%;
+	padding: 1% 2%;
+}
+
+.PostImg{
+	width: 30%;
+	padding-top: 2%;
+	float: left;
+}
+#last{
+	border:none;
+	padding-bottom: 1%;
+}
+
+.type{
+	width:20%;
+	float:right;
+	font: bold 1em "Geneva";
+	padding: 2% 0 1% 0;
+}
+.time{
+	width:20%;
+	float:right;
+	padding: 0 0 1% 0;
+	font: bold 1em "Geneva";
+}
+.founder{
+	width:20%;
+	float:right;
+	font: bold 1em "Geneva";
+}
+
+
+.main dt{
+	display: none;
+	padding-top: 2%;
+ }
 .main dt:first-child{
 	display: block;
 	padding-top: 3px;
@@ -153,10 +181,7 @@ button:hover{
 	height: 35px;
 	background-color: #DFF0D9;
 }
-.noResult{
-	margin-left: 50px;
-	font-size: 1.2em;
-}
+
 #hint{
 	margin-top:50px;
 	margin-bottom:50px;

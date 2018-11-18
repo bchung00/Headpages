@@ -33,7 +33,7 @@ window.addEventListener("load", function() {
             console.log(data);
             if(!(data == "" || data == undefined || data == null)){
                 setCookie("uid",data,1);
-                window.location.href="index.html";
+                window.location.href="personalPage.html?uid=" + data;
             }else{
                 document.getElementById("warning").innerHTML="  * Wrong Email/Password!";
                 password.value="";

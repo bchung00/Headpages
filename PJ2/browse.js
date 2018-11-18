@@ -10,6 +10,15 @@ window.addEventListener("load", function () {
         var post = document.getElementsByClassName("post");
         var description = document.getElementsByClassName("description");
 
+        var home = document.getElementById("home");
+        var uid = getCookie("uid");
+        home.setAttribute("href","personalPage.html?uid="+uid);
+        if(uid==""){
+            document.getElementById("selectLR").style.display = "none";
+        }else{
+            document.getElementById("selectLR").style.display = "block";
+        }
+
         function getCookie(c_name)
         {
             if (document.cookie.length>0)
@@ -89,8 +98,8 @@ window.addEventListener("load", function () {
                             img[i].setAttribute("src", "photos/blank.jpeg");
                         }
                         title[i].innerText = obj[i]["Name"];
-                        hre[i].setAttribute("href", "detail.html?id=" + obj[i]["PostID"]);
-                        link[i].setAttribute("href", "detail.html?id=" + obj[i]["PostID"]);
+                        //hre[i].setAttribute("href", "detail.html?id=" + obj[i]["PostID"]);
+                        //link[i].setAttribute("href", "detail.html?id=" + obj[i]["PostID"]);
                         content[i].innerText = obj[i]["Text"];
                         if(obj[i]["Photo_File"] != null) {
                             PostImg[i].setAttribute("src", obj[i]["Photo_File"]);
@@ -124,7 +133,7 @@ window.addEventListener("load", function () {
             if (obj.length != 0) {
                 for (var i = 0; i < obj.length; i++) {
                     title[i].innerText = obj[i]["Name"];
-                    title[i].setAttribute("href", "detail.html?id=" + obj[i]["GID"]);
+                    //title[i].setAttribute("href", "detail.html?id=" + obj[i]["GID"]);
                 }
             }
         };
@@ -148,7 +157,7 @@ window.addEventListener("load", function () {
             if (obj.length != 0) {
                 for (var i = 0; i < obj.length; i++) {
                     title[i].innerText = obj[i]["Name"];
-                    title[i].setAttribute("href", "detail.html?id=" + obj[i]["EID"]);
+                    //title[i].setAttribute("href", "detail.html?id=" + obj[i]["EID"]);
                 }
             }
         };

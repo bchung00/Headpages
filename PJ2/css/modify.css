@@ -35,8 +35,15 @@ table td{
 	border-bottom: 1px solid #EDEDED;
 	background-color: white;
 }
+table td a{
+	font:bold 1em "Verdana";
+	padding: 1% 1% 1% 1%;
+	margin: 1% 2% 1% 2%;
+	height: 100%;
+}
 .input{
-    width: 93.5%;
+    width: 80%;
+	float: right;
 	height: 100%;
 	font-size: 1em;
 	font-family: "Verdana";

@@ -1,71 +1,70 @@
-/**
- * Created by Chanyeol on 2017/6/25.
- */
 window.addEventListener("load",function (){
     var warning = document.getElementById("warning");
-    var title = document.getElementById("title");
-    var description = document.getElementById("description");
-    var city = document.getElementById("city");
-    var country = document.getElementById("country");
-    var continent = document.getElementById("continent");
-    var latitude = document.getElementById("latitude");
-    var longitude = document.getElementById("longitude");
+    var location = document.getElementById("location");
+    var date = document.getElementById("date");
+    var time = document.getElementById("time");
+    var text = document.getElementById("text");
     var img = document.getElementById("picture");
+    var tr = document.getElementsByTagName("tr");
 
-    var id = window.location.href.split("=");
+    var PostID = window.location.href.split("=");
+    var home = document.getElementById("home");
+    var uid = getCookie("uid");
+    home.setAttribute("href","personalPage.html?uid="+uid);
+
     var xhr = new XMLHttpRequest();
     xhr.open("post", "modify.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-    var data = "type=getInfo&id="+id[1];
+    var data = "PostID=" + PostID[1] + "&type=getInfo";
     xhr.send(data);
     xhr.onload = function () {
         var res = xhr.responseText;
         console.log(res);
         var obj = JSON.parse(res);
         console.log(obj);
-        title.value = obj["title"];
-        description.value = obj["description"];
-        city.value = obj["city"];
-        country.value = obj["country"];
-        continent.value = obj["continent"];
-        latitude.value = obj["latitude"];
-        longitude.value = obj["longitude"];
-        img.setAttribute("src","travel-images/medium/"+obj["path"]);
+        location.value = obj[0]["Location"];
+        time.value = obj[0]["Time"];
+        date.value = obj[0]["Date"];
+        text.value = obj[0]["Text"];
+        if(obj[0]["Photo_File"] != null) {
+            img.setAttribute("src", obj[0]["Photo_File"]);
+            tr[1].removeAttribute("hidden");
+        }else{
+            tr[1].setAttribute("hidden", "hidden");
+        }
     }
 
-    city.addEventListener("change",function () {
-        var xhr1 = new XMLHttpRequest();
-        xhr1.open("post", "modify.php", true);
-        xhr1.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-        var data = "type=change&city="+ city.value;
-        console.log(data);
-        xhr1.send(data);
-        xhr1.onload = function () {
-            var res = xhr1.responseText;
-            console.log(res);
-            var obj = JSON.parse(res);
-            console.log(obj);
-            country.value = obj["country"];
-            continent.value = obj["continent"];
-        }
-    });
-
     document.getElementById("btSubmit").onclick = function () {
-        if(((latitude.value.match(/^[-+]?[0-9]+(\.\d{1,6})?$/)) || latitude.value == null)
-            && ((longitude.value.match(/^[-+]?[0-9]+(\.\d{1,6})?$/)) || longitude.value == null)){
-            fetch("modify.php?type=modify&id="+id[1]+ "&title=" + title.value + "&description=" + description.value+ "&city=" + city.value+ "&country=" + country.value+ "&continent=" + continent.value+ "&latitude=" + latitude.value+ "&longitude=" + longitude.value).then(function(rsp) {
+        if(time == null || time.value.match(/^(20|21|22|23|[0-1]\d):[0-5]\d:[0-5]\d$/)){
+            fetch("modify.php?type=modify&PostID="+PostID[1]+ "&location=" + location.value + "&time=" + time.value + "&date=" + date.value+ "&text=" + text.value).then(function(rsp) {
                 return rsp.text();
             }).then(function(data) {
                 console.log(data);
                 if(data=="success"){
-                    alert("修改成功！");
-                    window.location.href = "my photos.html";
+                    alert("Success!");
+                    var uid = getCookie("uid");
+                    window.location.href = "personalPage.html?uid=" + uid;
                 }else {
-                    warning.innerText = " * 修改失败";
+                    warning.innerText = " * Failed!";
                 }
             });
-        }else{
-            warning.innerText=" * 请输入正确的经纬度";
-        }
+        }else
+            warning.innerText = " * Time Has Wrong Format!";
+
     };
+
+    function getCookie(c_name) {
+        if (document.cookie.length>0)
+        {
+            c_start=document.cookie.indexOf(c_name + "=")
+            if (c_start!=-1)
+            {
+                c_start=c_start + c_name.length+1
+                c_end=document.cookie.indexOf(";",c_start)
+                if (c_end==-1) c_end=document.cookie.length
+                return document.cookie.substring(c_start,c_end);
+            }
+        }
+        return ""
+    }
 });

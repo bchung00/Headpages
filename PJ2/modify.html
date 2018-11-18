@@ -7,21 +7,50 @@
    <link href="css/navbar.css" rel="stylesheet">
    <style></style>
   <script src="modify.js"></script>
+  <script>
+      function setImagePreview() {
+          var docObj=document.getElementById("file");
+
+          var imgObjPreview=document.getElementById("picture");
+          if(docObj.files && docObj.files[0]){
+              document.getElementById("pic").removeAttribute("hidden");
+              imgObjPreview.style.width = '20%';
+              imgObjPreview.src = window.URL.createObjectURL(docObj.files[0]);
+          }else{
+              docObj.select();
+              var imgSrc = document.selection.createRange().text;
+              var localImagId = document.getElementById("localImag");
+              //Default size
+              localImagId.style.width = "300px";
+              localImagId.style.height = "120px";
+              //In case users upload non-pictures by changing the suffix of the file
+              try{
+                  localImagId.style.filter="progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                  localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+              }catch(e){
+                  alert("Wrong picture format!");
+                  return false;
+              }
+              imgObjPreview.style.display = 'none';
+              document.selection.empty();
+          }
+          return true;
+      }
+  </script>
 </head>
 <body>
   <header>
     <nav class="navbar">
       <ul>
         <li id="Head"><a>HeadPages</a></li>
-    	  <li class="nav"><a href="index.html">Home</a></li>
+    	  <li class="nav"><a id="home">Home</a></li>
         <li class="nav"><a href="browse.html">Browse</a></li>
         <li class="nav"><a href="search.html">Search</a></li>
         <li class="MyAccount"><a>My Account ▼</a>
           <ul> 
-              <li class="upload"><a href="upload.html"><img class="symbol1" src="travel-images/symbols/upload.png" width="14%">Upload</a></li>
-              <li class="MAnav"><a href="my photos.html"><img class="symbol1" src="travel-images/symbols/myphotos.png" width="14%">My Photos</a></li>
-              <li class="MAnav"><a href="my favourites.html"><img class="symbol1" src="travel-images/symbols/favourite.png" width="14%">Favourite</a></li>
-              <li class="MAnav"><a href="index-before.html"><img class="symbol2" src="travel-images/symbols/logout.png" width="14%">Logout</a></li>
+              <li class="upload"><a><img class="symbol1" src="photos/symbols/upload.png" width="14%">Upload</a></li>
+              <li class="MAnav"><a><img class="symbol1" src="photos/symbols/favourite.png" width="14%">Favourite</a></li>
+              <li class="MAnav"><a href="login.html"><img class="symbol2" src="photos/symbols/logout.png" width="14%">Logout</a></li>
           </ul>
         </li>
       </ul>
@@ -31,46 +60,37 @@
   <article>
     <div class="modify">
         <table cellspacing="0" cellpadding="0">
-          <th>Modify Photo Information</th>
-          <tr>
+          <th>Modify</th>
+          <tr id="pic">
             <td><img width="300em" class="picture" id="picture"></td>
           </tr>
           <tr>
-            <td><input type="text" placeholder="Photo Name..." name="name" id="title" class="input" /><br> </td>
+            <td><a>Location: </a><input type="text" placeholder="Location..." name="location" id="location" class="input" /><br> </td>
           </tr>
           <tr>
-            <td><textarea rows="3" placeholder="Photo Description..."  name="description" id="description" class="input" /></textarea></td>
+            <td><a>Date: </a><input type="date" name="date" id="date" class="input" /><br> </td>
           </tr>
           <tr>
-            <td><input type="text" placeholder="City..." name="city" id="city" class="input" /><br> </td>
+            <td><a>Time: </a><input type="text" name="time" id="time" class="input" /><br> </td>
           </tr>
           <tr>
-            <td><input type="text" placeholder="Country..." name="country" id="country" class="input" readonly /><br> </td>
+            <td><a>Text: </a><input type="text" placeholder="Text..." name="text" id="text" class="input" /><br> </td>
           </tr>
-          <tr>
-            <td><input type="text" placeholder="Continent..." name="continent" id="continent" class="input" readonly/><br> </td>
-          </tr>
-          <tr>
-            <td><input type="text" placeholder="Latitude..." name="latitude" id="latitude"  class="input" /><br></td>
-          </tr>
-          <tr>
-            <td><input type="text" placeholder="Longitude..." name="longitude" id="longitude" class="input" /><br></td>
-          </tr>
+
           <tr>
             <td>
               <a id="submit"><button id="btSubmit">Submit</button></a><a id="warning" style="color: #a94442"></a>
             </td>
           </tr>
         </table>
-
   </div>
   </article>
   <footer>
     <nav class="end">
       <hr/>
       <ul>
-        <li><a>@2017 16SS All rights reserved.</a></li>
-        <li class="back"><a href="#"><img src="travel-images/symbols/arrow.png"> Back to top</a></li>
+        <li><a>@2018 HeadPages All rights reserved.</a></li>
+        <li class="back"><a href="#"><img src="photos/symbols/arrow.png"> Back to top</a></li>
       </ul>
     </nav>
   </footer>
