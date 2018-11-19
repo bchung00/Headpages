@@ -43,7 +43,12 @@ JOIN, VIEW, Aggregation: All three queries are demonstrated with a page containi
             GROUP BY G.GID
             ORDER BY COUNT(*) DESC;
 
-DIVISION: 
+DIVISION: Check which users are in all groups of specific type ("Sports" in our example.)
+    SELECT U.name FROM users U
+        WHERE NOT EXISTS (
+        (SELECT G.GID FROM groups G WHERE G.type = 'Sports')
+        EXCEPT
+        (SELECT GCU.GID FROM group_contains_user GCU WHERE GCU.UID = U.UID ) );
 
 
 
