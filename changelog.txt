@@ -1,13 +1,14 @@
-ERD:
-    - Removed Members entity
-        - Changed to a relation called group_contains_users which defines which users are in a group 
-    - Added attributes to Comments entity
-    - Added attributes to Groups entity
-    - Added attributes to Post entity
-    - Added attributes to Users entity
-    - Added attributes to Admins entity
-    - Extended aggregation to Users entity
-    - Play relation now points to Common User instead of Users as Companies can't play games. 
+Changes from Formal Specification:
 
-Database:
+    ER diagram:
+    - Removed “Members” entity and associated relationships, replaced with “Contains” relationship from “Users” to “Group” as linking users         to groups makes much more sense than having users linked to entities that are then linked to groups. It becomes too indirect of a           relationship is is purely unnecessary.
+    - Changed the model of admins. All admins are models as monitoring the aggregate entity of: Users, Posts, and Groups as they should             have full responsibility over user profiles and accounts.
+    - Added “photo_file” attributes for users to upload photos for their profiles.
+    - Added username/password for admins so they can log in the the ui
+    - “Plays” relation changed from pointing to users to pointing to “Common_users” as allowing company users to play games would be odd.
+
+    Database:
     - Reflected changes to ERD in database table creation SQL queries
+
+Missing Deliverables:
+We should have all required deliverables but our ui does not implement and display full functionality of all our listed queries, but has enough to demonstrate the requirements during the demo. Said queries should still function when ran directly through the SQL.
